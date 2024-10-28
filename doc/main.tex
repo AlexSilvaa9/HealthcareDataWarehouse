@@ -1,0 +1,134 @@
+\documentclass{article}
+\usepackage{fullpage}
+
+%load needed packages
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage[spanish]{babel} % Paquete para el idioma español
+\usepackage{float}  % Necesario para [H]
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{HTML}{5AB2FF}
+\definecolor{morado}{HTML}{AD88C6}
+\definecolor{BG}{HTML}{EEEEEE}
+\definecolor{azul}{HTML}{4D869C}
+\definecolor{sqlblue}{HTML}{FF8C00} % Color para las palabras clave SQL
+
+% Estilo para DDL
+\lstdefinestyle{ddlstyle}{
+	language=SQL,
+	backgroundcolor=\color{BG},
+	commentstyle=\color{codegreen},
+	basicstyle=\ttfamily\small,
+	keywordstyle=\color{azul},
+	stringstyle=\color{morado},
+	showstringspaces=false,
+	breaklines=true,
+	frame=shadowbox,
+	numbers=left,
+	numberstyle=\tiny\color{gray},
+	captionpos=b,
+}
+
+% Estilo para SQL
+\lstdefinestyle{sqlstyle}{
+	language=SQL,
+	backgroundcolor=\color{BG},
+	commentstyle=\color{codegreen},
+	basicstyle=\ttfamily\small,
+	keywordstyle=\color{sqlblue}, % Color diferente para palabras clave SQL
+	stringstyle=\color{morado},
+	showstringspaces=false,
+	breaklines=true,
+	frame=shadowbox,
+	numbers=left,
+	numberstyle=\tiny\color{gray},
+	captionpos=b,
+}
+
+\begin{document}
+
+
+
+% Portada
+\begin{titlepage}
+	\centering
+	\vspace*{3cm}
+	
+	% Título destacado
+	{\Huge \textbf{Diseño y Explotación de un almacén de 
+			UCI Sanitaria}\\[0.5cm]}
+	
+	% Espacio y logotipo (si lo tienes, por ejemplo el logo de tu universidad)
+	\vspace{2cm}
+	\includegraphics[width=0.3\textwidth]{images/uma_logo.jpg}\\[1cm]
+	
+	% Nombre del autor
+	{\LARGE \textbf{Alejandro Silva Rodríguez}\\[0.5cm]}
+	{\LARGE \textbf{Marta Cuevas Rodríguez}\\[0.5cm]}
+	{\large \textit{Almacenes De Datos}\\
+		Universidad de Málaga\\
+		}
+	
+	\vfill
+	
+	% Fecha en la parte inferior de la página
+	{\large Septiembre 2024}
+\end{titlepage}
+
+% indice
+\tableofcontents
+
+\newpage
+\section{Introducción}
+\label{sec:introduccion}
+Breve introducción sobre el objetivo del proyecto y el contexto en la UCI Sanitaria. Descripción de la importancia de un almacén de datos para el análisis de datos de pacientes, su relevancia en la asignatura de Almacenes de Datos, y el tipo de información que se modelará (por ejemplo, pacientes con enfermedades cardiovasculares).
+
+\section{Diseño Conceptual}
+\label{sec:diseno_conceptual}
+\subsection{Descripción del Modelo Conceptual}
+Presenta el diseño conceptual del almacén de datos. Explica las entidades y dimensiones seleccionadas, y proporciona un diagrama conceptual generado en la herramienta elegida. Justifica las decisiones de diseño, destacando aspectos como la selección de dimensiones y las jerarquías establecidas.
+
+\subsection{Decisiones de Diseño}
+Explica y justifica las decisiones tomadas durante el diseño conceptual, incluyendo cualquier simplificación, agrupamiento o denormalización de las dimensiones. Discute el propósito de cada decisión y cómo contribuye a cumplir con los objetivos del proyecto.
+
+\section{Diseño Lógico}
+\label{sec:diseno_logico}
+\subsection{Transformación a Modelo en Copo de Nieve / Constelación}
+Describe cómo el diseño conceptual se convierte en un modelo lógico de tipo copo de nieve o constelación. Incluye un diagrama del diseño lógico, destacando las relaciones entre las tablas y el esquema de la dimensión tiempo denormalizada.
+
+\subsection{Definición de Claves}
+Define las claves primarias y las claves externas de cada tabla en el esquema lógico, explicando cómo cada clave se selecciona y se asocia a las entidades correspondientes.
+
+\section{Creación de Tablas en SQL Server}
+\label{sec:creacion_tablas}
+\subsection{Generación del Código DDL}
+Presenta el código DDL para la creación de las tablas del almacén en SQL Server. Explica las instrucciones y pasos necesarios para ejecutar este código correctamente, incluyendo cualquier configuración especial o instrucción adicional necesaria.
+
+\subsection{Instrucciones para Crear el Almacén}
+Proporciona una guía para desplegar el almacén de datos en SQL Server usando el código DDL, detallando los pasos a seguir y cualquier configuración de permisos o ajustes adicionales.
+
+\section{Dificultades Encontradas}
+\label{sec:dificultades_encontradas}
+Enumera y describe las dificultades enfrentadas durante el desarrollo del proyecto. Explica cómo se resolvieron estos problemas o, en caso de no haber encontrado complicaciones, indícalo claramente.
+
+\section{Conclusión}
+\label{sec:conclusion}
+Resumen de los principales resultados del proyecto, con un breve comentario sobre la utilidad del almacén de datos desarrollado y cómo este se alinea con los objetivos de la asignatura.
+
+
+\newpage
+\section{Acceso al Repositorio}
+
+Toda la información adicional, incluyendo el código fuente y la documentación completa de este proyecto, está disponible en el repositorio de GitHub \cite{silva2024github}.
+
+% Incluir la bibliografía
+\bibliographystyle{plain}  % Estilo de la bibliografía (por ejemplo, plain, alpha, ieee, etc.)
+\bibliography{bibli}  % Nombre del archivo .bib sin la extensión
+
+\end{document}
