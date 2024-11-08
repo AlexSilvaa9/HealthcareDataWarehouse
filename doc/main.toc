@@ -9,6 +9,6 @@
 \contentsline {section}{\numberline {4}Creación de Tablas en SQL Server}{2}{}%
 \contentsline {subsection}{\numberline {4.1}Generación del Código DDL}{2}{}%
 \contentsline {subsection}{\numberline {4.2}Instrucciones para Crear el Almacén}{2}{}%
-\contentsline {section}{\numberline {5}Dificultades Encontradas}{2}{}%
+\contentsline {section}{\numberline {5}Dificultades Encontradas}{3}{}%
 \contentsline {section}{\numberline {6}Conclusión}{3}{}%
 \contentsline {section}{\numberline {7}Acceso al Repositorio}{4}{}%

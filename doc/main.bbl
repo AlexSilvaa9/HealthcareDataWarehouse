@@ -1,10 +1,15 @@
 \begin{thebibliography}{1}
 
+\bibitem{eicu_crd}
+MIT~Laboratory for Computational~Physiology.
+\newblock {eICU Collaborative Research Database}.
+\newblock \url{https://eicu-crd.mit.edu/}, 2020.
+\newblock Accessed: 2024-11-08.
+
 \bibitem{silva2024github}
 Alex Silva.
-\newblock Deep\_learning\_clinical\_data.
-\newblock \url{https://github.com/AlexSilvaa9/Deep\_learning\_clinical\_data},
-  2024.
+\newblock Healthcaredatawarehouse.
+\newblock \url{https://github.com/AlexSilvaa9/HealthcareDataWarehouse}, 2024.
 \newblock Último acceso: 1 octubre 2024.
 
 \end{thebibliography}
