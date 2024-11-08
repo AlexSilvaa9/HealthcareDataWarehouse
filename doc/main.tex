@@ -92,19 +92,24 @@ Este proyecto tiene como objetivo desarrollar un almacén de datos enfocado en a
 La selección de este hecho permite un análisis detallado de los patrones de consumo y gasto en medicamentos, lo cual puede aportar información valiosa para la gestión de recursos en la UCI, mejorar la eficiencia en los tratamientos y optimizar los presupuestos hospitalarios.
 
 
-
-
-
-
-
-
 \section{Diseño Conceptual}
 \label{sec:diseno_conceptual}
 \subsection{Descripción del Modelo Conceptual}
-Presenta el diseño conceptual del almacén de datos. Explica las entidades y dimensiones seleccionadas, y proporciona un diagrama conceptual generado en la herramienta elegida. Justifica las decisiones de diseño, destacando aspectos como la selección de dimensiones y las jerarquías establecidas.
 
-\subsection{Decisiones de Diseño}
-Explica y justifica las decisiones tomadas durante el diseño conceptual, incluyendo cualquier simplificación, agrupamiento o denormalización de las dimensiones. Discute el propósito de cada decisión y cómo contribuye a cumplir con los objetivos del proyecto.
+El modelo conceptual de nuestro almacén de datos tiene como hecho principal el \textbf{Gasto en medicamentos} en la UCI del hospital, y como medida la \textbf{cantidad} de gasto.
+\\ 
+
+Este modelo está compuesto por cinco dimensiones, descritas a continuación:
+
+\begin{enumerate}
+	\item \textbf{Paciente}: La dimensión \textit{Paciente} presenta una jerarquía múltiple con dos subjerarquías principales: \textit{Alergia} y \textit{Tratamiento}. 
+	\item \textbf{Tiempo}: La dimensión \textit{Tiempo} se estructura con \textit{Año} como su único atributo.
+	\item \textbf{Hospital}: Esta dimensión incluye los atributos \textit{Región} y \textit{Hospital}, permitiendo agrupar los datos por área geográfica y hospital específico.
+	\item \textbf{Ingreso}: La dimensión \textit{Ingreso} se compone del atributo \textit{Ingreso}, que identifica cada episodio de admisión a la UCI.
+	\item \textbf{Medicamento}: En esta dimensión, el atributo \textit{Medicamento} permite categorizar los datos en función del fármaco administrado.
+\end{enumerate}
+
+
 
 \section{Diseño Lógico}
 \label{sec:diseno_logico}
