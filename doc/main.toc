@@ -1,13 +1,14 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {section}{\numberline {1}Introducción}{2}{}%
-\contentsline {section}{\numberline {2}Diseño Conceptual}{2}{}%
-\contentsline {subsection}{\numberline {2.1}Descripción del Modelo Conceptual}{2}{}%
-\contentsline {section}{\numberline {3}Diseño Lógico}{2}{}%
-\contentsline {subsection}{\numberline {3.1}Transformación a Modelo en Copo de Nieve / Constelación}{2}{}%
-\contentsline {subsection}{\numberline {3.2}Definición de Claves}{2}{}%
-\contentsline {section}{\numberline {4}Creación de Tablas en SQL Server}{2}{}%
-\contentsline {subsection}{\numberline {4.1}Generación del Código DDL}{2}{}%
-\contentsline {subsection}{\numberline {4.2}Instrucciones para Crear el Almacén}{3}{}%
-\contentsline {section}{\numberline {5}Dificultades Encontradas}{3}{}%
-\contentsline {section}{\numberline {6}Conclusión}{3}{}%
-\contentsline {section}{\numberline {7}Acceso al Repositorio}{4}{}%
+\contentsline {section}{\numberline {2}Objetivos}{2}{}%
+\contentsline {section}{\numberline {3}Diseño Conceptual}{2}{}%
+\contentsline {subsection}{\numberline {3.1}Descripción del Modelo Conceptual}{2}{}%
+\contentsline {section}{\numberline {4}Diseño Lógico}{3}{}%
+\contentsline {subsection}{\numberline {4.1}Transformación a Modelo en Copo de Nieve / Constelación}{3}{}%
+\contentsline {subsection}{\numberline {4.2}Definición de Claves}{3}{}%
+\contentsline {section}{\numberline {5}Creación de Tablas en SQL Server}{3}{}%
+\contentsline {subsection}{\numberline {5.1}Generación del Código DDL}{3}{}%
+\contentsline {subsection}{\numberline {5.2}Instrucciones para Crear el Almacén}{3}{}%
+\contentsline {section}{\numberline {6}Dificultades Encontradas}{3}{}%
+\contentsline {section}{\numberline {7}Conclusión}{3}{}%
+\contentsline {section}{\numberline {8}Acceso al Repositorio}{4}{}%

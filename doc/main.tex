@@ -87,28 +87,38 @@
 \newpage
 \section{Introducción}
 \label{sec:introduccion}
-Este proyecto tiene como objetivo desarrollar un almacén de datos enfocado en analizar el gasto en medicamentos para pacientes ingresados en la Unidad de Cuidados Intensivos (UCI) en hospitales de EE.UU. Utilizando una base de datos proporcionada por el Instituto de Tecnología de Massachusetts (MIT) \cite{eicu_crd}, que contiene información sobre síntomas, diagnósticos, y tratamientos, se modelará el almacén específicamente en torno a los costos de los fármacos administrados a los pacientes críticos.
 
-La selección de este hecho permite un análisis detallado de los patrones de consumo y gasto en medicamentos, lo cual puede aportar información valiosa para la gestión de recursos en la UCI, mejorar la eficiencia en los tratamientos y optimizar los presupuestos hospitalarios.
+En el contexto hospitalario actual, el monitoreo y la gestión eficiente de los recursos es una necesidad apremiante, especialmente en unidades como la de Cuidados Intensivos (UCI), donde la administración de medicamentos representa una parte sustancial de los costos. A nivel mundial, el incremento en el costo de los medicamentos y la presión financiera sobre los sistemas de salud han impulsado la búsqueda de soluciones que optimicen el uso de los recursos en entornos críticos. Sin embargo, muchas instituciones hospitalarias carecen de herramientas analíticas específicas para monitorizar y analizar de manera detallada el gasto en fármacos, lo que limita la capacidad de identificar patrones de consumo y optimizar la asignación de presupuestos.\\
 
+En Estados Unidos, la situación es especialmente significativa debido a la gran cantidad de recursos destinados a la atención en las UCI y la disponibilidad de grandes volúmenes de datos clínicos. Actualmente, existen bases de datos como la proporcionada por el Instituto de Tecnología de Massachusetts (MIT) \cite{eicu_crd}, que recogen información completa sobre los tratamientos, síntomas y diagnósticos de los pacientes, ofreciendo una oportunidad para profundizar en el análisis del gasto en medicamentos en pacientes críticos. No obstante, estas bases de datos no están estructuradas para un análisis enfocado exclusivamente en los costos de los medicamentos en el entorno de la UCI, lo que representa un vacío que este proyecto busca abordar.
+
+\section{Objetivos}
+\label{sec:objetivos}
+
+Este proyecto tiene como objetivo desarrollar un almacén de datos específicamente diseñado para analizar el gasto en medicamentos en pacientes ingresados en la UCI en hospitales de EE.UU. A partir de la base de datos proporcionada por el MIT, se creará un modelo que permita identificar patrones de consumo y gasto en fármacos administrados a pacientes críticos. Con esto, se espera ofrecer una herramienta que aporte información valiosa para la gestión de recursos en las UCI, contribuya a optimizar los tratamientos y ayude en la planificación presupuestaria de los hospitales.
 
 \section{Diseño Conceptual}
 \label{sec:diseno_conceptual}
+
 \subsection{Descripción del Modelo Conceptual}
 
-El modelo conceptual de nuestro almacén de datos tiene como hecho principal el \textbf{Gasto en medicamentos} en la UCI del hospital, y como medida la \textbf{cantidad} de gasto.
-\\ 
+El modelo conceptual de nuestro almacén de datos toma como hecho principal el \textbf{Gasto en Medicamentos} en la UCI del hospital, y como medidas las variables de \textbf{cantidad de gasto}, \textbf{tasa de infusión} y \textbf{volumen de fluido administrado}.
 
-Este modelo está compuesto por cinco dimensiones, descritas a continuación:
+El modelo está compuesto por cinco dimensiones, descritas a continuación:
 
 \begin{enumerate}
-	\item \textbf{Paciente}: La dimensión \textit{Paciente} presenta una jerarquía múltiple con dos subjerarquías principales: \textit{Alergia} y \textit{Tratamiento}. 
-	\item \textbf{Tiempo}: La dimensión \textit{Tiempo} se estructura con \textit{Año} como su único atributo.
-	\item \textbf{Hospital}: Esta dimensión incluye los atributos \textit{Región} y \textit{Hospital}, permitiendo agrupar los datos por área geográfica y hospital específico.
-	\item \textbf{Ingreso}: La dimensión \textit{Ingreso} se compone del atributo \textit{Ingreso}, que identifica cada episodio de admisión a la UCI.
-	\item \textbf{Medicamento}: En esta dimensión, el atributo \textit{Medicamento} permite categorizar los datos en función del fármaco administrado.
+	\item \textbf{Tiempo}: Esta dimensión organiza los datos temporalmente mediante el atributo \textit{Año}.
+	
+	\item \textbf{Hospital}: La dimensión \textit{Hospital} incluye los niveles \textit{Región} y \textit{Hospital}, lo que permite agrupar los datos por área geográfica y hospital específico. Además, el hospital contiene como atributo una variable categórica que indica el número de camas (por ejemplo, <500 camas).
+	
+	\item \textbf{Estancia}: La dimensión \textit{Estancia} describe el tiempo de permanencia del paciente en el hospital. Está estructurada en los niveles \textit{Ingreso en UCI} y \textit{Estancia en el Hospital}, ya que un mismo paciente puede ingresar varias veces en la UCI durante una sola estancia en el hospital. Para el nivel \textit{Ingreso en UCI}, los atributos incluyen \textit{Tipo de Unidad}, \textit{Peso}, \textit{Altura}, \textit{Edad de Admisión} y \textit{Género del Paciente}. En cuanto a la \textit{Estancia en el Hospital}, los atributos incluyen la \textit{Fuente de Admisión} (departamento donde fue admitido) y el \textit{Estado de Alta Hospitalaria} (indicando si el paciente fue dado de alta vivo o fallecido).
+	
+	\item \textbf{Medicamento}: Esta dimensión permite categorizar los datos según el \textit{Medicamento} administrado al paciente en la UCI.
+	
+	\item \textbf{Tratamiento} (pendiente de inclusión): La dimensión \textit{Tratamiento} se considerará si resulta relevante para el análisis.
+	
+	\item \textbf{Alergia} (pendiente de inclusión): Similar a \textit{Tratamiento}, esta dimensión está en consideración para su inclusión, según su relevancia en el análisis.
 \end{enumerate}
-
 
 
 \section{Diseño Lógico}
