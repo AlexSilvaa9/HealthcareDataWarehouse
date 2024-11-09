@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="CA80659D-E6F4-8F3F-B2FF-BC38E297FE62" containerWithKeyObject="79DF18D8-7A59-87CE-16F5-72B093F5E930" localFKIndex="06D9535B-5229-216B-961C-E4B9E42C5AF7" name="Hospital_Region_FK">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-09 22:53:02 UTC</createdTime>
+<generatorID>514341E5-ECC2-3C04-C8EB-6CFEEC5FE6DC</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<referredTableLongName>Region</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>4F35035B-6D7A-A70B-32E7-2D669EEB830B</referredTableID>
+<keyObject>6844DEEB-26F9-6219-8F37-7190AF85C122</keyObject>
+<referredKeyID>6844DEEB-26F9-6219-8F37-7190AF85C122</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>regionId</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

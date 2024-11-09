@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="933E6B1F-545A-41D9-3D73-1D1F9164E649" name="Medicamento">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-09 22:40:38 UTC</createdTime>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<engineerTo>
+<item key="367599CB-2FC1-EC20-E4AE-964C4D46D8E0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="medicamentoId" id="3E473A51-C4DC-2669-E3BF-AF7D01AC36B5">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-09 22:40:49 UTC</createdTime>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<engineerTo>
+<item key="367599CB-2FC1-EC20-E4AE-964C4D46D8E0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="EEF468A7-D7DE-6F83-C9DA-5B1C8CCAEFBA" name="medicamento PK">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-09 22:42:20 UTC</createdTime>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="367599CB-2FC1-EC20-E4AE-964C4D46D8E0" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>3E473A51-C4DC-2669-E3BF-AF7D01AC36B5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

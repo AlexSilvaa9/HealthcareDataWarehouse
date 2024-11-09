@@ -1,0 +1,133 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B29D066A-CB8E-1B46-D19C-CDB5964D366E" name="IngresoUCI">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-09 22:44:14 UTC</createdTime>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<engineerTo>
+<item key="367599CB-2FC1-EC20-E4AE-964C4D46D8E0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ingresoUCIID" id="EF955A4E-F528-8142-C1B3-0AA0AD79F902">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-09 22:44:25 UTC</createdTime>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<engineerTo>
+<item key="367599CB-2FC1-EC20-E4AE-964C4D46D8E0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipoUnidad" id="270C6472-E973-6EF8-DFE6-1F79051A9808">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-09 22:45:09 UTC</createdTime>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<engineerTo>
+<item key="367599CB-2FC1-EC20-E4AE-964C4D46D8E0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="alturaAdmision" id="B3615A1A-CF07-7DFE-95C0-0370BED80CC3">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-09 22:46:06 UTC</createdTime>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<engineerTo>
+<item key="367599CB-2FC1-EC20-E4AE-964C4D46D8E0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="pesoAdmision" id="9D90F438-4F7D-43EF-7168-42CE5FB95D1B">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-09 22:46:20 UTC</createdTime>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<engineerTo>
+<item key="367599CB-2FC1-EC20-E4AE-964C4D46D8E0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="edadAdmision" id="C1398BD3-38C1-4AB1-9FB6-CDA6C2D0101E">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-09 22:46:34 UTC</createdTime>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<engineerTo>
+<item key="367599CB-2FC1-EC20-E4AE-964C4D46D8E0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="generoAdmision" id="C46538B8-7415-E8E5-AC48-870EF29BAD59">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-09 22:46:47 UTC</createdTime>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<engineerTo>
+<item key="367599CB-2FC1-EC20-E4AE-964C4D46D8E0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 CHAR</dataTypeSize>
+<ownDataTypeParameters>25 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="estanciaHospitalID" id="562BD748-304B-902C-13A6-D1AD11DEBF91">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-09 22:51:27 UTC</createdTime>
+<generatorID>8A3AA371-F262-871C-9767-0C4E72355EB6</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<engineerTo>
+<item key="367599CB-2FC1-EC20-E4AE-964C4D46D8E0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>858E507E-6CA8-DD98-ED56-E9F9EB184981</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7ECA3773-8766-B33D-8203-8AE27C5F13F6" name="IngresoUCI PK">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-09 22:45:07 UTC</createdTime>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="367599CB-2FC1-EC20-E4AE-964C4D46D8E0" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>EF955A4E-F528-8142-C1B3-0AA0AD79F902</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

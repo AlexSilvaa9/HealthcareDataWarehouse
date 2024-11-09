@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="CC2AC6B0-A503-7BCC-BB5C-7779905A6CDD" containerWithKeyObject="369238CF-9159-B91C-91EF-726F9461FA27" localFKIndex="FD3144AB-7695-9145-055C-FA4DA744995C" name="GastoMedicamento_IngresoUCI_FK">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-09 22:53:02 UTC</createdTime>
+<generatorID>9C1A04A1-15E3-2F9C-014C-CF6AC986D5C1</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<referredTableLongName>IngresoUCI</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>2807DD1C-FF95-403F-D139-F7409035E69E</referredTableID>
+<keyObject>F201664D-6416-AEC2-96D7-A5E1CFFC4C50</keyObject>
+<referredKeyID>F201664D-6416-AEC2-96D7-A5E1CFFC4C50</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ingresoUCIID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

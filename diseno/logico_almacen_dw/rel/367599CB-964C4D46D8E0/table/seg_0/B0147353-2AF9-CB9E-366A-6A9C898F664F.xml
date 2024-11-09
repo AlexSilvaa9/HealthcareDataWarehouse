@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B0147353-2AF9-CB9E-366A-6A9C898F664F" name="EstanciaHospital">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-09 22:53:02 UTC</createdTime>
+<generatorID>443C69DA-EDB2-4D85-AD75-7EFB1BACFA05</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="estanciaHospitalID" id="525EA624-452B-261C-BCBD-EE6F661E8884">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-09 22:53:02 UTC</createdTime>
+<generatorID>858E507E-6CA8-DD98-ED56-E9F9EB184981</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fuenteAdmision" id="1294CFDB-26C3-BC83-012D-D1304BB11BE2">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-09 22:53:02 UTC</createdTime>
+<generatorID>A91D49F0-7311-E19B-AF1F-8D6F5187FB71</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estadoAltaHospitalaria" id="16CC799D-B803-6A90-6649-A0FCEA864D96">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-09 22:53:02 UTC</createdTime>
+<generatorID>710834F5-D7BB-ACD0-C2B8-CE646997E1B5</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EED8FF8D-54A9-0FB7-6A0A-DFD4B5805B20" name="EstanciaHospital_PK">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-09 22:53:02 UTC</createdTime>
+<generatorID>9D28C0EE-0B96-73E6-0D8D-01A680D4944A</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="525EA624-452B-261C-BCBD-EE6F661E8884"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

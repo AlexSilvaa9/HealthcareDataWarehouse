@@ -1,0 +1,37 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7891359E-7933-10F7-95BE-7A3892EC7F1A" name="Anyo">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-09 22:53:02 UTC</createdTime>
+<generatorID>DB2F0F6D-7D97-4646-E849-5258796A6C5D</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="anyoID" id="0335C38E-93DD-5ED6-7E9E-892B334DD024">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-09 22:53:02 UTC</createdTime>
+<generatorID>17E45B90-F958-DAF0-39EC-82F57256E3F2</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="20B5DE8D-605D-A613-50FA-0A3D7ACC68B4" name="Anyo_PK">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-09 22:53:02 UTC</createdTime>
+<generatorID>84868E5D-CF56-DB3C-256E-8E2927B4EAC6</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0335C38E-93DD-5ED6-7E9E-892B334DD024"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
