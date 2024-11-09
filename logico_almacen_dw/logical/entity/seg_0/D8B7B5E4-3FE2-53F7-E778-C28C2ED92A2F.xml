@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D8B7B5E4-3FE2-53F7-E778-C28C2ED92A2F" name="GastoMedicamento">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-09 17:12:08 UTC</createdTime>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<engineerTo>
+<item key="367599CB-2FC1-EC20-E4AE-964C4D46D8E0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cantidad" id="6FEDAF6B-F361-3839-E891-EA8CCC644CF5">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-09 17:12:28 UTC</createdTime>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<engineerTo>
+<item key="367599CB-2FC1-EC20-E4AE-964C4D46D8E0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tasa_infusion" id="73F5FDFE-C85C-91C4-603D-A8FA97CCE8B7">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-09 17:12:50 UTC</createdTime>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<engineerTo>
+<item key="367599CB-2FC1-EC20-E4AE-964C4D46D8E0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="volumen_fluido" id="A55D8CD6-A4D2-1DDD-5E2D-E654B5A0502B">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-09 17:13:13 UTC</createdTime>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<engineerTo>
+<item key="367599CB-2FC1-EC20-E4AE-964C4D46D8E0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="anyoID" id="38F6A6C7-97A5-9F60-B216-77AB4BE45527">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-09 22:35:09 UTC</createdTime>
+<generatorID>04DDE86B-0676-1CEE-4B34-C8703D291EB8</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<engineerTo>
+<item key="367599CB-2FC1-EC20-E4AE-964C4D46D8E0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>17E45B90-F958-DAF0-39EC-82F57256E3F2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="hospitalID" id="548F48F0-E207-6B8D-F18B-8EC9181E2324">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-09 22:38:42 UTC</createdTime>
+<generatorID>8357635D-6817-A25C-BA56-B94BFE829352</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<engineerTo>
+<item key="367599CB-2FC1-EC20-E4AE-964C4D46D8E0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>880FD2A7-E9F4-9A5C-9514-8DFD53365C08</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="medicamentoId" id="496E1E6A-CCDE-9041-EC32-6C8841DB7191">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-09 22:43:25 UTC</createdTime>
+<generatorID>E9DA93F8-0748-9D22-5136-BD72F0633CEE</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<engineerTo>
+<item key="367599CB-2FC1-EC20-E4AE-964C4D46D8E0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>3E473A51-C4DC-2669-E3BF-AF7D01AC36B5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ingresoUCIID" id="5DB48BE2-DE32-48F3-2166-832C5F988C57">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-09 22:51:54 UTC</createdTime>
+<generatorID>9C1A04A1-15E3-2F9C-014C-CF6AC986D5C1</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<engineerTo>
+<item key="367599CB-2FC1-EC20-E4AE-964C4D46D8E0" value="true"/>
+</engineerTo>
+<referedAttribute>EF955A4E-F528-8142-C1B3-0AA0AD79F902</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>
