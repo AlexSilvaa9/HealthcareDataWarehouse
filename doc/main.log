@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.9.27)  13 NOV 2024 19:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.9.27)  13 NOV 2024 19:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -265,6 +265,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 157--159
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--175
+
+ []
+
 [5] (./main.bbl
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 6
 .
@@ -278,7 +283,7 @@ LaTeX Info: Redefining \% on input line 8.
 Here is how much of TeX's memory you used:
  5194 strings out of 476091
  79789 string characters out of 5794081
- 1856330 words of memory out of 5000000
+ 1859330 words of memory out of 5000000
  25534 multiletter control sequences out of 15000+600000
  521683 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -292,7 +297,7 @@ m-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb
 ></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb></usr/share/texmf/f
 onts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm
 -super/sftt1000.pfb>
-Output written on main.pdf (7 pages, 1109890 bytes).
+Output written on main.pdf (7 pages, 1110574 bytes).
 PDF statistics:
  85 PDF objects out of 1000 (max. 8388607)
  50 compressed objects within 1 object stream
