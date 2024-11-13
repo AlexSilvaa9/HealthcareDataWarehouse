@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 Edg/130.0.0.0" version="24.8.4">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.8.6">
   <diagram name="Página-1" id="6Y7BRsBwV7AE-Fat2NN-">
-    <mxGraphModel dx="1233" dy="533" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1444" dy="825" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -221,7 +221,7 @@
         <mxCell id="bctwhJUAPt9a3tQ_kbxR-17" value="Paciente" style="text;whiteSpace=wrap;html=1;rotation=0;" parent="1" vertex="1">
           <mxGeometry x="374" y="95" width="80" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="S7K0g6uUdNNvXftOYRjb-1" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmany;startArrow=ERmany;rounded=0;entryX=0.991;entryY=0.07;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="0rnSWCQlwUZsOfia6lN0-5" target="0rnSWCQlwUZsOfia6lN0-54">
+        <mxCell id="S7K0g6uUdNNvXftOYRjb-1" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmany;startArrow=ERmany;rounded=0;entryX=0.991;entryY=0.07;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="0rnSWCQlwUZsOfia6lN0-5" target="0rnSWCQlwUZsOfia6lN0-54" edge="1">
           <mxGeometry width="100" height="100" relative="1" as="geometry">
             <mxPoint x="115" y="377.5" as="sourcePoint" />
             <mxPoint x="215" y="277.5" as="targetPoint" />
@@ -230,7 +230,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="S7K0g6uUdNNvXftOYRjb-2" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmany;startArrow=ERmany;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=0.289;exitY=-0.017;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="0rnSWCQlwUZsOfia6lN0-5" target="0rnSWCQlwUZsOfia6lN0-60">
+        <mxCell id="S7K0g6uUdNNvXftOYRjb-2" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmany;startArrow=ERmany;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=0.289;exitY=-0.017;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="0rnSWCQlwUZsOfia6lN0-5" target="0rnSWCQlwUZsOfia6lN0-60" edge="1">
           <mxGeometry width="100" height="100" relative="1" as="geometry">
             <mxPoint x="330" y="405" as="sourcePoint" />
             <mxPoint x="214" y="158" as="targetPoint" />
