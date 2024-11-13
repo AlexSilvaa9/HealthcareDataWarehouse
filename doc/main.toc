@@ -4,11 +4,9 @@
 \contentsline {section}{\numberline {3}Diseño Conceptual}{2}{}%
 \contentsline {subsection}{\numberline {3.1}Descripción del Modelo Conceptual}{2}{}%
 \contentsline {section}{\numberline {4}Diseño Lógico}{4}{}%
-\contentsline {subsection}{\numberline {4.1}Transformación a Modelo en Copo de Nieve / Constelación}{4}{}%
-\contentsline {subsection}{\numberline {4.2}Definición de Claves}{4}{}%
-\contentsline {section}{\numberline {5}Creación de Tablas en SQL Server}{4}{}%
-\contentsline {subsection}{\numberline {5.1}Generación del Código DDL}{4}{}%
-\contentsline {subsection}{\numberline {5.2}Instrucciones para Crear el Almacén}{4}{}%
-\contentsline {section}{\numberline {6}Dificultades Encontradas}{4}{}%
-\contentsline {section}{\numberline {7}Conclusión}{4}{}%
-\contentsline {section}{\numberline {8}Acceso al Repositorio}{5}{}%
+\contentsline {subsection}{\numberline {4.1}Transformación a Modelo en Copo de Nieve}{4}{}%
+\contentsline {subsection}{\numberline {4.2}Definición de Claves}{5}{}%
+\contentsline {subsection}{\numberline {4.3}Instrucciones para Crear el Almacén}{5}{}%
+\contentsline {section}{\numberline {5}Dificultades Encontradas}{5}{}%
+\contentsline {section}{\numberline {6}Conclusión}{5}{}%
+\contentsline {section}{\numberline {7}Acceso al Repositorio}{6}{}%

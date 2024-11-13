@@ -135,16 +135,29 @@ El modelo está compuesto por cinco dimensiones, descritas a continuación:
 
 \section{Diseño Lógico}
 \label{sec:diseno_logico}
-\subsection{Transformación a Modelo en Copo de Nieve / Constelación}
-Describe cómo el diseño conceptual se convierte en un modelo lógico de tipo copo de nieve o constelación. Incluye un diagrama del diseño lógico, destacando las relaciones entre las tablas y el esquema de la dimensión tiempo denormalizada.
+\subsection{Transformación a Modelo en Copo de Nieve}
+Para construir el modelo lógico a partir del modelo conceptual, se realizó una transformación en la que cada dimensión y el hecho principal, \textbf{Gasto en medicamentos}, fueron convertidos en entidades relacionales en forma de tablas. El modelo lógico mantiene la estructura planteada en el modelo conceptual, permitiendo almacenar el gasto en medicamentos junto a los atributos de las diferentes dimensiones relevantes para el análisis.
+
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.7\textwidth]{images/diseño_logico.png}
+	\caption{Modelo Lógico}
+	\label{fig:logico}
+\end{figure}
+Cada dimensión del modelo conceptual (\textit{Paciente}, \textit{Año}, \textit{Hospital}, \textit{Ingreso}, \textit{Medicamento}, \textit{Alergia} y \textit{Tratamiento}) se transformó en una tabla individual en el modelo lógico. Las tablas de dimensión incluyen sus atributos clave, manteniendo las jerarquías definidas en el modelo conceptual. La tabla central \textbf{GastoMedicamento} representa el hecho principal del modelo y contiene las medidas de análisis, como \textit{cantidad}, \textit{tasa de infusión} y \textit{volumen de fluido}. Esta tabla se conecta con las tablas de dimensión mediante claves foráneas, que reflejan las relaciones entre las dimensiones y el hecho central en la estructura relacional. De este modo, el modelo lógico permite realizar consultas eficientes sobre el gasto en medicamentos con base en las características de cada dimensión.
+
+Para gestionar la relación de \textbf{GastoMedicamento} con las dimensiones \textit{Alergia} y \textit{Tratamiento}, que pueden tener una asociación de tipo \textbf{muchos-a-muchos}, fue necesario introducir tablas intermedias. Estas tablas, denominadas \textbf{Relation\_10} (para la relación entre \textit{GastoMedicamento} y \textit{Alergia}) y \textbf{Relation\_11} (para la relación entre \textit{GastoMedicamento} y \textit{Tratamiento}), permiten descomponer la relación muchos-a-muchos en dos relaciones de uno-a-muchos. De esta manera, cada registro en \textbf{GastoMedicamento} puede asociarse a múltiples alergias y tratamientos sin redundancia de datos ni inconsistencias. Las tablas intermedias incluyen claves foráneas hacia \textbf{GastoMedicamento} y hacia las tablas \textit{Alergia} o \textit{Tratamiento}, asegurando la integridad referencial en estas relaciones.
 
 \subsection{Definición de Claves}
-Define las claves primarias y las claves externas de cada tabla en el esquema lógico, explicando cómo cada clave se selecciona y se asocia a las entidades correspondientes.
+En el modelo lógico, cada tabla de dimensión se ha diseñado con una clave primaria única, que permite identificar de manera exclusiva cada registro y facilita las consultas sobre datos específicos. Estas claves primarias son identificadores (como \textit{PacienteID}, \textit{HospitalID}, \textit{MedicamentoID}, entre otros) y garantizan la integridad de los datos dentro de cada tabla.
+\\
 
-\section{Creación de Tablas en SQL Server}
-\label{sec:creacion_tablas}
-\subsection{Generación del Código DDL}
-Presenta el código DDL para la creación de las tablas del almacén en SQL Server. Explica las instrucciones y pasos necesarios para ejecutar este código correctamente, incluyendo cualquier configuración especial o instrucción adicional necesaria.
+La tabla de hechos \textbf{GastoMedicamento} utiliza, además, claves foráneas que apuntan a las claves primarias de las tablas de dimensión. Por ejemplo, \textit{Paciente\_uniquePID} se utiliza como clave foránea para enlazar la tabla de \textit{Paciente} con \textbf{GastoMedicamento}, y de forma similar se manejan las relaciones con \textit{Hospital}, \textit{Medicamento}, y las demás dimensiones. Las tablas intermedias \textbf{Relation\_10} y \textbf{Relation\_11} también incluyen claves foráneas hacia las tablas de dimensión \textit{Alergia} y \textit{Tratamiento}, respectivamente, migrando las claves primarias de estas dimensiones a dichas tablas intermedias para mantener la relación de muchos-a-muchos.
+\\
+
+Este uso de claves foráneas permite conectar el hecho del gasto en medicamentos con las distintas características de cada dimensión, proporcionando una estructura organizada y facilitando la integridad referencial en el almacén de datos. Al tener un esquema de este tipo, el modelo se encuentra normalizado y optimizado tanto para la integridad de los datos como para mejorar la eficiencia en las consultas.
 
 \subsection{Instrucciones para Crear el Almacén}
 Proporciona una guía para desplegar el almacén de datos en SQL Server usando el código DDL, detallando los pasos a seguir y cualquier configuración de permisos o ajustes adicionales.
