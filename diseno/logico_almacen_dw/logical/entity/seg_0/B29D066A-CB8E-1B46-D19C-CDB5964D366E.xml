@@ -85,20 +85,6 @@
 <dataTypeSize>10 CHAR</dataTypeSize>
 <ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="generoAdmision" id="C46538B8-7415-E8E5-AC48-870EF29BAD59">
-<createdBy>alexs</createdBy>
-<createdTime>2024-11-09 22:46:47 UTC</createdTime>
-<ownerDesignName>logico_almacen_dw</ownerDesignName>
-<engineerTo>
-<item key="367599CB-2FC1-EC20-E4AE-964C4D46D8E0" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>25 CHAR</dataTypeSize>
-<ownDataTypeParameters>25 CHAR,,</ownDataTypeParameters>
-</Attribute>
 <Attribute name="estanciaHospitalID" id="562BD748-304B-902C-13A6-D1AD11DEBF91">
 <createdBy>alexs</createdBy>
 <createdTime>2024-11-09 22:51:27 UTC</createdTime>

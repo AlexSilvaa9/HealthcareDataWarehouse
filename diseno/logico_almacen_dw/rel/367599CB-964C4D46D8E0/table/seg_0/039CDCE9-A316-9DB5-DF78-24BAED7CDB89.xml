@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="039CDCE9-A316-9DB5-DF78-24BAED7CDB89" name="Relation_11">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-12 23:50:31 UTC</createdTime>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Tratamiento_tratamientoID" id="B6696AED-9AB8-3DBB-C708-B3FD938CCB06">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-12 23:50:31 UTC</createdTime>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5F495031-0547-2927-BABE-47C4067F9FC3" referredColumn="49D0F759-D583-AFBC-40D4-6C70ABDC018B"/>
+</associations>
+</Column>
+<Column name="GastoMedicamento_GastoMedicamento_ID" id="1331D0C0-218C-44C6-B4F1-761112C9D542">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-12 23:50:31 UTC</createdTime>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="33A302DE-0596-A673-0A7E-CC152124BCD6" referredColumn="A3B40013-44FD-FC4B-1640-1D307A7BEFC9"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AAC3CE8D-7DBA-634D-1873-C1E96B2457E0" name="Relation_11_PK">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-12 23:50:31 UTC</createdTime>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B6696AED-9AB8-3DBB-C708-B3FD938CCB06"/>
+<colUsage columnID="1331D0C0-218C-44C6-B4F1-761112C9D542"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="ED79888D-7552-54C2-3BCE-F979FB9D807A" name="Relation_11_Tratamiento_FK">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-12 23:50:31 UTC</createdTime>
+<generatorID>70493D34-C090-3E1F-8E4E-EDEF48765E44</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B6696AED-9AB8-3DBB-C708-B3FD938CCB06"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0DE2A0F6-24E3-4D83-BF6C-88AF8D7D77C4" name="Relation_11_GastoMedicamento_FK">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-12 23:50:31 UTC</createdTime>
+<generatorID>70493D34-C090-3E1F-8E4E-EDEF48765E44</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1331D0C0-218C-44C6-B4F1-761112C9D542"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

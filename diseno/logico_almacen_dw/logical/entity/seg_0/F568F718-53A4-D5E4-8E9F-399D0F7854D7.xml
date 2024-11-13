@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F568F718-53A4-D5E4-8E9F-399D0F7854D7" name="Paciente">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-12 23:31:29 UTC</createdTime>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<engineerTo>
+<item key="367599CB-2FC1-EC20-E4AE-964C4D46D8E0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="uniquePID" id="3308123F-69B0-B033-B0DF-B8483B292C34">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-12 23:32:00 UTC</createdTime>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<engineerTo>
+<item key="367599CB-2FC1-EC20-E4AE-964C4D46D8E0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="genero" id="2564B94E-5E45-C7A5-523C-0C13C93FC09D">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-12 23:33:06 UTC</createdTime>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<engineerTo>
+<item key="367599CB-2FC1-EC20-E4AE-964C4D46D8E0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="etnia" id="96101A62-C4C3-6700-4138-96B0065CB072">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-12 23:33:43 UTC</createdTime>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<engineerTo>
+<item key="367599CB-2FC1-EC20-E4AE-964C4D46D8E0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="0527A7C7-721E-9581-762B-EEC84AAFC8FF" name="Paciente PK">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-12 23:33:05 UTC</createdTime>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<engineerTo>
+<item key="367599CB-2FC1-EC20-E4AE-964C4D46D8E0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>3308123F-69B0-B033-B0DF-B8483B292C34</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

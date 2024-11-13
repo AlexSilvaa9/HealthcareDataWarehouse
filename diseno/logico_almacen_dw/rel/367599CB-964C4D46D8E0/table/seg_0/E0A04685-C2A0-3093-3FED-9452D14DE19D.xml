@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E0A04685-C2A0-3093-3FED-9452D14DE19D" name="Relation_10">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-12 23:50:31 UTC</createdTime>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Alergia_alergiaID" id="CE22F532-1D67-94D5-C07F-17B332B73F8A">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-12 23:50:31 UTC</createdTime>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="57C79562-267D-9469-D41C-B4FCBECA82C5" referredColumn="7EA0C906-77C3-B350-73A0-955F6DDACDAB"/>
+</associations>
+</Column>
+<Column name="GastoMedicamento_GastoMedicamento_ID" id="56B5D21E-B0A9-7ECE-CDDF-9392FEDE3162">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-12 23:50:31 UTC</createdTime>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E80341A0-41CC-FB2C-60AB-3E94C1C60F4C" referredColumn="A3B40013-44FD-FC4B-1640-1D307A7BEFC9"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="51D9AB3E-4E42-7760-6EF8-F36C6A73DED7" name="Relation_10_PK">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-12 23:50:31 UTC</createdTime>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CE22F532-1D67-94D5-C07F-17B332B73F8A"/>
+<colUsage columnID="56B5D21E-B0A9-7ECE-CDDF-9392FEDE3162"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0E6CB156-9DEF-4DE5-A2FC-553CCDBA6013" name="Relation_10_Alergia_FK">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-12 23:50:31 UTC</createdTime>
+<generatorID>BAEB8E66-9C2C-C72C-FC8B-2F957F0BFA10</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CE22F532-1D67-94D5-C07F-17B332B73F8A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="47D0C8E2-C1CB-D3E7-ACE0-A5EA3A97D43F" name="Relation_10_GastoMedicamento_FK">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-12 23:50:31 UTC</createdTime>
+<generatorID>BAEB8E66-9C2C-C72C-FC8B-2F957F0BFA10</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="56B5D21E-B0A9-7ECE-CDDF-9392FEDE3162"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

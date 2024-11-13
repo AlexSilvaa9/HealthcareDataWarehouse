@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C5B1CF55-8F78-3D9D-8E7C-C9D9965F6F4A" name="Paciente">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-12 23:50:31 UTC</createdTime>
+<generatorID>F568F718-53A4-D5E4-8E9F-399D0F7854D7</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="uniquePID" id="04A58FC2-1EF8-0848-65C2-D32CFF70E1B5">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-12 23:50:31 UTC</createdTime>
+<generatorID>3308123F-69B0-B033-B0DF-B8483B292C34</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="genero" id="498F89C1-7716-DD0E-0647-C6CA1DF742BC">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-12 23:50:31 UTC</createdTime>
+<generatorID>2564B94E-5E45-C7A5-523C-0C13C93FC09D</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="etnia" id="9FA90467-8515-C43C-3855-14E11EF04937">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-12 23:50:31 UTC</createdTime>
+<generatorID>96101A62-C4C3-6700-4138-96B0065CB072</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6FE9DED6-B754-F55C-E7DF-6B5420C2792E" name="Paciente_PK">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-12 23:50:31 UTC</createdTime>
+<generatorID>0527A7C7-721E-9581-762B-EEC84AAFC8FF</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="04A58FC2-1EF8-0848-65C2-D32CFF70E1B5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

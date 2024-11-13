@@ -113,5 +113,21 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="uniquePID" id="5705C77D-771B-A012-F31F-B1767383345C">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-12 23:49:24 UTC</createdTime>
+<generatorID>FE0A4AF5-6369-40CB-E9D8-BE1F873EB08F</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<engineerTo>
+<item key="367599CB-2FC1-EC20-E4AE-964C4D46D8E0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>3308123F-69B0-B033-B0DF-B8483B292C34</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 </Entity>

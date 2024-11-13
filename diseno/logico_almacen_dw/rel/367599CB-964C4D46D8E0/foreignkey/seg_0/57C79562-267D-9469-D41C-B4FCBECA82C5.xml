@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="57C79562-267D-9469-D41C-B4FCBECA82C5" containerWithKeyObject="E0A04685-C2A0-3093-3FED-9452D14DE19D" localFKIndex="0E6CB156-9DEF-4DE5-A2FC-553CCDBA6013" name="Relation_10_Alergia_FK">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-12 23:50:31 UTC</createdTime>
+<generatorID>BAEB8E66-9C2C-C72C-FC8B-2F957F0BFA10</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<referredTableLongName>Alergia</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>ECC8CE3A-611B-1505-366C-5217660E4AEE</referredTableID>
+<keyObject>70C495FB-2D01-5ADE-44EC-D8D96C2A02AD</keyObject>
+<referredKeyID>70C495FB-2D01-5ADE-44EC-D8D96C2A02AD</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>alergiaID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

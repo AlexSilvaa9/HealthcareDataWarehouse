@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="33A302DE-0596-A673-0A7E-CC152124BCD6" containerWithKeyObject="039CDCE9-A316-9DB5-DF78-24BAED7CDB89" localFKIndex="0DE2A0F6-24E3-4D83-BF6C-88AF8D7D77C4" name="Relation_11_GastoMedicamento_FK">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-12 23:50:31 UTC</createdTime>
+<generatorID>70493D34-C090-3E1F-8E4E-EDEF48765E44</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<referredTableLongName>GastoMedicamento</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>369238CF-9159-B91C-91EF-726F9461FA27</referredTableID>
+<keyObject>368CDA1C-AC95-7792-2216-082E135DFD90</keyObject>
+<referredKeyID>368CDA1C-AC95-7792-2216-082E135DFD90</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>GastoMedicamento_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -8,6 +8,19 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="GastoMedicamento_ID" id="A3B40013-44FD-FC4B-1640-1D307A7BEFC9">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-12 23:50:31 UTC</createdTime>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
 <Column name="cantidad" id="4C4A6448-1CCB-F179-F164-7DA9DDEB77BD">
 <createdBy>alexs</createdBy>
 <createdTime>2024-11-09 22:53:02 UTC</createdTime>
@@ -107,8 +120,35 @@
 <colAssociation fkAssociation="CC2AC6B0-A503-7BCC-BB5C-7779905A6CDD" referredColumn="4E2C905E-1889-6F7F-7CDD-6D0D0DD83F19"/>
 </associations>
 </Column>
+<Column name="Paciente_uniquePID" id="A574408A-BCCE-9FC2-A062-C99D51E9E2B0">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-12 23:50:31 UTC</createdTime>
+<generatorID>5705C77D-771B-A012-F31F-B1767383345C</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BE6A3BDE-6D43-9560-BCDC-585A30FD9DB5" referredColumn="04A58FC2-1EF8-0848-65C2-D32CFF70E1B5"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="368CDA1C-AC95-7792-2216-082E135DFD90" name="GastoMedicamento_PK">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-12 23:50:31 UTC</createdTime>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="A3B40013-44FD-FC4B-1640-1D307A7BEFC9"/>
+</indexColumnUsage>
+</ind_PK_UK>
 <ind_PK_UK id="425B68CC-99C9-C2E4-1D9E-83797E1B64B8" name="GastoMedicamento_Anyo_FK">
 <createdBy>alexs</createdBy>
 <createdTime>2024-11-09 22:53:02 UTC</createdTime>
@@ -151,6 +191,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="6479EA76-7949-DD95-9492-1A13C656B5FC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A4A03AFA-27DD-B561-C828-341D44A3D5EE" name="GastoMedicamento_Paciente_FK">
+<createdBy>alexs</createdBy>
+<createdTime>2024-11-12 23:50:31 UTC</createdTime>
+<generatorID>FE0A4AF5-6369-40CB-E9D8-BE1F873EB08F</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A574408A-BCCE-9FC2-A062-C99D51E9E2B0"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
