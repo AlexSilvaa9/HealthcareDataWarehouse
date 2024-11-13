@@ -104,6 +104,14 @@ Este proyecto tiene como objetivo desarrollar un almacén de datos específicame
 
 El modelo conceptual de nuestro almacén de datos toma como hecho principal el \textbf{Gasto en Medicamentos} en la UCI del hospital, y como medidas las variables de \textbf{cantidad de gasto}, \textbf{tasa de infusión} y \textbf{volumen de fluido administrado}.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.7\textwidth]{images/diseño_conceptual.png}
+	\caption{Modelo Conceptual}
+	\label{fig:conceptual}
+\end{figure}
+
+
 El modelo está compuesto por cinco dimensiones, descritas a continuación:
 
 \begin{enumerate}
@@ -115,10 +123,14 @@ El modelo está compuesto por cinco dimensiones, descritas a continuación:
 	
 	\item \textbf{Medicamento}: Esta dimensión permite categorizar los datos según el \textit{Medicamento} administrado al paciente en la UCI.
 	
-	\item \textbf{Tratamiento} (pendiente de inclusión): La dimensión \textit{Tratamiento} se considerará si resulta relevante para el análisis.
+
+	\item \textbf{Tratamiento}: Esta dimensión clasifica el gasto en medicamentos según el tipo de \textit{Tratamiento} para el que se administran, permitiendo analizar el consumo de fármacos en función de las diferentes intervenciones clínicas en la UCI.
 	
-	\item \textbf{Alergia} (pendiente de inclusión): Similar a \textit{Tratamiento}, esta dimensión está en consideración para su inclusión, según su relevancia en el análisis.
+	\item \textbf{Alergia}: Esta dimensión agrupa los datos según los tipos de \textit{Alergias} presentes en los pacientes, indicando la relación entre las alergias y los medicamentos administrados, lo cual permite analizar cómo estas condiciones impactan en el gasto en fármacos.
+	
+	\item \textbf{Paciente}: Esta dimensión identifica al \textit{Paciente} en quien se produce el gasto de medicamentos, permitiendo un análisis individualizado del consumo de fármacos en función de las características demográficas y clínicas de cada paciente.
 \end{enumerate}
+
 
 
 \section{Diseño Lógico}
