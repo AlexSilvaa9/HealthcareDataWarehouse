@@ -1,10 +1,28 @@
 \begin{thebibliography}{1}
 
+\bibitem{sqlserver_managementstudio}
+Microsoft Corporation.
+\newblock {\em SQL Server Management Studio}, 2024.
+\newblock Herramienta de gestión para SQL Server, utilizada para visualizar el
+  modelo lógico.
+
+\bibitem{oracle_datamodeler}
+Oracle Corporation.
+\newblock {\em Oracle SQL Developer Data Modeler}, 2024.
+\newblock Herramienta para modelado de bases de datos, permite diseñar
+  diagramas ER.
+
 \bibitem{eicu_crd}
 MIT~Laboratory for Computational~Physiology.
 \newblock {eICU Collaborative Research Database}.
 \newblock \url{https://eicu-crd.mit.edu/}, 2020.
-\newblock Accessed: 2024-11-08.
+\newblock Último acceso: 8 noviembre 2024.
+
+\bibitem{drawio}
+JGraph Ltd.
+\newblock {\em {draw.io}: Diagram Software}, 2024.
+\newblock Versión en línea para diagramas de flujo y diseño de bases de
+  datos.
 
 \bibitem{silva2024github}
 Alex Silva.

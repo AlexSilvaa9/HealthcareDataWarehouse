@@ -6,7 +6,7 @@
 \contentsline {section}{\numberline {4}Diseño Lógico}{4}{}%
 \contentsline {subsection}{\numberline {4.1}Transformación a Modelo en Copo de Nieve}{4}{}%
 \contentsline {subsection}{\numberline {4.2}Definición de Claves}{5}{}%
-\contentsline {subsection}{\numberline {4.3}Instrucciones para Crear el Almacén}{5}{}%
+\contentsline {subsection}{\numberline {4.3}Instrucciones para Crear el Almacén de Datos}{5}{}%
 \contentsline {section}{\numberline {5}Dificultades Encontradas}{5}{}%
-\contentsline {section}{\numberline {6}Conclusión}{5}{}%
-\contentsline {section}{\numberline {7}Acceso al Repositorio}{6}{}%
+\contentsline {section}{\numberline {6}Conclusión}{6}{}%
+\contentsline {section}{\numberline {7}Acceso al Repositorio}{7}{}%

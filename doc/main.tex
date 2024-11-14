@@ -102,12 +102,12 @@ Este proyecto tiene como objetivo desarrollar un almacén de datos específicame
 
 \subsection{Descripción del Modelo Conceptual}
 
-El modelo conceptual de nuestro almacén de datos toma como hecho principal el \textbf{Gasto en Medicamentos} en la UCI del hospital, y como medidas las variables de \textbf{cantidad de gasto}, \textbf{tasa de infusión} y \textbf{volumen de fluido administrado}.
+El modelo conceptual (FIgura \ref{fig:conceptual}) de nuestro almacén de datos toma como hecho principal el \textbf{Gasto en Medicamentos} en la UCI del hospital, y como medidas las variables de \textbf{cantidad de gasto}, \textbf{tasa de infusión} y \textbf{volumen de fluido administrado}.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=.7\textwidth]{images/diseño_conceptual.png}
-	\caption{Modelo Conceptual}
+	\caption{Modelo Conceptual elaborado con \textit{draw.io} \cite{drawio}}
 	\label{fig:conceptual}
 \end{figure}
 
@@ -136,14 +136,15 @@ El modelo está compuesto por cinco dimensiones, descritas a continuación:
 \section{Diseño Lógico}
 \label{sec:diseno_logico}
 \subsection{Transformación a Modelo en Copo de Nieve}
-Para construir el modelo lógico a partir del modelo conceptual, se realizó una transformación en la que cada dimensión y el hecho principal, \textbf{Gasto en medicamentos}, fueron convertidos en entidades relacionales en forma de tablas. El modelo lógico mantiene la estructura planteada en el modelo conceptual, permitiendo almacenar el gasto en medicamentos junto a los atributos de las diferentes dimensiones relevantes para el análisis.
+s
 
+Para construir el modelo lógico \ref{fig:logico} a partir del modelo conceptual, realizamos una transformación en la que cada dimensión y el hecho principal, \textbf{Gasto en Medicamentos}, fueron convertidos en entidades relacionales en forma de tablas. Este modelo lógico, desarrollado con \textit{Oracle SQL Developer Data Modeler} \cite{oracle_datamodeler}, sigue una estructura en estrella, donde la dimensión de tiempo se encuentra denormalizada para optimizar el análisis temporal. La estructura planteada permite almacenar el gasto en medicamentos junto a los atributos de las diferentes dimensiones relevantes para el análisis. 
 
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=.7\textwidth]{images/diseño_logico.png}
-	\caption{Modelo Lógico}
+	\caption{Modelo Lógico elaborado con \textit{SQL Server Management Studio} \cite{sqlserver_managementstudio}}
 	\label{fig:logico}
 \end{figure}
 Cada dimensión del modelo conceptual (\textit{Paciente}, \textit{Año}, \textit{Hospital}, \textit{Ingreso}, \textit{Medicamento}, \textit{Alergia} y \textit{Tratamiento}) se transformó en una tabla individual en el modelo lógico. Las tablas de dimensión incluyen sus atributos clave, manteniendo las jerarquías definidas en el modelo conceptual. La tabla central \textbf{GastoMedicamento} representa el hecho principal del modelo y contiene las medidas de análisis, como \textit{cantidad}, \textit{tasa de infusión} y \textit{volumen de fluido}. Esta tabla se conecta con las tablas de dimensión mediante claves foráneas, que reflejan las relaciones entre las dimensiones y el hecho central en la estructura relacional. De este modo, el modelo lógico permite realizar consultas eficientes sobre el gasto en medicamentos con base en las características de cada dimensión.
@@ -158,14 +159,38 @@ La tabla de hechos \textbf{GastoMedicamento} utiliza, además, claves foráneas 
 \\
 
 Este uso de claves foráneas permite conectar el hecho del gasto en medicamentos con las distintas características de cada dimensión, proporcionando una estructura organizada y facilitando la integridad referencial en el almacén de datos. Al tener un esquema de este tipo, el modelo se encuentra normalizado y optimizado tanto para la integridad de los datos como para mejorar la eficiencia en las consultas.
+\subsection{Instrucciones para Crear el Almacén de Datos}
 
-\subsection{Instrucciones para Crear el Almacén}
-Proporciona una guía para desplegar el almacén de datos en SQL Server usando el código DDL, detallando los pasos a seguir y cualquier configuración de permisos o ajustes adicionales.
+Para facilitar la creación del almacén de datos, se ha adjuntado un archivo en lenguaje de definición de datos (DDL) que contiene las instrucciones necesarias para crear las tablas, claves y restricciones del esquema.
+
+A continuación, se detallan los pasos para su ejecución en SQL Server Management Studio:
+
+\begin{enumerate}
+	\item \textbf{Crear la base de datos}: Inicie el entorno de SQL Server Management Studio y cree una nueva base de datos.
+	\item \textbf{Cargar el archivo DDL}: Abra el archivo DDL adjunto. Este archivo contiene todas las definiciones de tablas y restricciones.
+	\item \textbf{Seleccionar la base de datos}: Incluya el comando \texttt{USE <nombre\_base\_de\_datos>;} seguido de \texttt{GO} al inicio del archivo, reemplazando \texttt{<nombre\_base\_de\_datos>} por el nombre de la base de datos creada.
+	\item \textbf{Ejecutar el script}: Ejecute el archivo DDL completo como un script. Esto creará todas las tablas, claves y restricciones requeridas para el almacén de datos.
+\end{enumerate}
+
+Al finalizar, todas las estructuras necesarias para el almacén de datos estarán definidas en la base de datos seleccionada.
+
 
 \section{Dificultades Encontradas}
 \label{sec:dificultades_encontradas}
-Enumera y describe las dificultades enfrentadas durante el desarrollo del proyecto. Explica cómo se resolvieron estos problemas o, en caso de no haber encontrado complicaciones, indícalo claramente.
 
+A lo largo del proyecto nos hemos encontrado con varios obstáculos que nos han hecho replantear algunos aspectos del diseño del almacén de datos para la gestión hospitalaria:
+
+\begin{enumerate}
+	\item \textbf{Comprender la base de datos de UCI}: La base de datos de UCI es bastante compleja, con muchas tablas y una gran cantidad de atributos. Nos llevó tiempo entender cómo se relacionan todos estos datos entre sí, lo cual ha sido clave para seleccionar las tablas y atributos realmente necesarios, evitando redundancias.
+	
+	\item \textbf{Manejo de relaciones muchos a muchos (n:m)}: Encontramos bastantes relaciones n:m, lo que complicó el diseño, ya que tuvimos que crear tablas intermedias y asegurarnos de que todo estuviera correctamente enlazado.
+	
+	\item \textbf{Elegir software adecuado para el modelado conceptual}: Nos costó encontrar una herramienta que realmente se adaptara al diseño conceptual que queríamos. Muchas de las opciones no ofrecían las funcionalidades necesarias para trabajar con relaciones complejas y hechos como se necesita en un almacñen de datos.
+
+
+\end{enumerate}
+
+A pesar de estas dificultades, cada uno de estos retos nos ha ayudado a entender mejor las particularidades del sector salud y a preparar un diseño más sólido para el almacén de datos.
 \section{Conclusión}
 \label{sec:conclusion}
 
