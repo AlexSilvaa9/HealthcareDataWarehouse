@@ -20,6 +20,19 @@
 <ownDataTypeParameters>255,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="nombreRegion" id="8DECDA9B-6381-80D8-1E02-C4970566835A">
+<createdBy>marcu</createdBy>
+<createdTime>2024-11-24 21:43:39 UTC</createdTime>
+<generatorID>9CC22DCF-BE0C-C2C3-CC46-97739BC19463</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>64</dataTypeSize>
+<ownDataTypeParameters>64,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="6844DEEB-26F9-6219-8F37-7190AF85C122" name="Region_PK">

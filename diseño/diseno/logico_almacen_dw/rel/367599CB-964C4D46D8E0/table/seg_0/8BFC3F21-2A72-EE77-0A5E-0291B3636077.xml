@@ -19,6 +19,19 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="nombreMedicamento" id="85D99E42-5B9E-A4A4-C371-EAF807D52BFC">
+<createdBy>marcu</createdBy>
+<createdTime>2024-11-24 21:43:39 UTC</createdTime>
+<generatorID>07AA4548-5AF6-9F43-3F97-5F15B13D8F36</generatorID>
+<ownerDesignName>logico_almacen_dw</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="CF94D249-B322-6C9A-B0CA-61A3F28E1FC8" name="Medicamento_PK">

@@ -1,5 +1,5 @@
 -- Generado por Oracle SQL Developer Data Modeler 23.1.0.087.0806
---   en:        2024-11-13 00:50:43 CET
+--   en:        2024-11-24 22:45:39 CET
 --   sitio:      SQL Server 2012
 --   tipo:      SQL Server 2012
 
@@ -100,7 +100,8 @@ GO
 
 CREATE TABLE Medicamento 
     (
-     medicamentoId VARCHAR NOT NULL 
+     medicamentoId VARCHAR NOT NULL , 
+     nombreMedicamento VARCHAR (255) 
     )
 GO
 
@@ -126,7 +127,8 @@ GO
 
 CREATE TABLE Region 
     (
-     regionId VARCHAR (255) NOT NULL 
+     regionId VARCHAR (255) NOT NULL , 
+     nombreRegion VARCHAR (64) 
     )
 GO
 
