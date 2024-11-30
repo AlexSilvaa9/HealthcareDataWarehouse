@@ -14,10 +14,12 @@ BEGIN
         BEGIN TRANSACTION;
 
         -- Eliminar datos de las tablas
-		DELETE FROM GastoMedicamento;
-
+		
 		DELETE FROM Relation_10;
         DELETE FROM Relation_11;
+
+		DELETE FROM GastoMedicamento;
+
 
         DELETE FROM Medicamento;
         DELETE FROM Alergia;
