@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="103"
-  DTS:VersionGUID="{181EE51C-FEC5-4D67-967C-95D78AA64DEF}">
+  DTS:VersionBuild="104"
+  DTS:VersionGUID="{602E2632-F23C-455B-896F-60A24DEA552D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -691,13 +691,13 @@
           </DTS:ObjectData>
         </DTS:Executable>
         <DTS:Executable
-          DTS:refId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)"
+          DTS:refId="Package\Alergia y relation10\Relation10"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Tarea Flujo de datos"
           DTS:DTSID="{A055EB7C-C427-41F0-A1D7-738B8EDB6CCB}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
-          DTS:ObjectName="Relation10 (PR COMPLETAR AL FINAL!!!)"
+          DTS:ObjectName="Relation10"
           DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
           <DTS:ObjectData>
@@ -705,7 +705,7 @@
               version="1">
               <components>
                 <component
-                  refId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Consulta DB DW"
+                  refId="Package\Alergia y relation10\Relation10\Consulta DB DW"
                   componentClassID="Microsoft.ManagedComponentHost"
                   contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
                   description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
@@ -759,7 +759,7 @@ WHERE
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Consulta DB DW.Connections[IDbConnection]"
+                      refId="Package\Alergia y relation10\Relation10\Consulta DB DW.Connections[IDbConnection]"
                       connectionManagerID="Package.ConnectionManagers[LocalHost.eICU Collaborative Research Database]"
                       connectionManagerRefId="Package.ConnectionManagers[LocalHost.eICU Collaborative Research Database]"
                       description="Administrador de conexiones administrado"
@@ -767,65 +767,65 @@ WHERE
                   </connections>
                   <outputs>
                     <output
-                      refId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Consulta DB DW.Outputs[Salida de origen de ADO NET]"
+                      refId="Package\Alergia y relation10\Relation10\Consulta DB DW.Outputs[Salida de origen de ADO NET]"
                       name="Salida de origen de ADO NET">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Consulta DB DW.Outputs[Salida de origen de ADO NET].Columns[GastoMedicamento_ID]"
+                          refId="Package\Alergia y relation10\Relation10\Consulta DB DW.Outputs[Salida de origen de ADO NET].Columns[GastoMedicamento_ID]"
                           dataType="i4"
                           errorOrTruncationOperation="Conversión"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Consulta DB DW.Outputs[Salida de origen de ADO NET].ExternalColumns[GastoMedicamento_ID]"
-                          lineageId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Consulta DB DW.Outputs[Salida de origen de ADO NET].Columns[GastoMedicamento_ID]"
+                          externalMetadataColumnId="Package\Alergia y relation10\Relation10\Consulta DB DW.Outputs[Salida de origen de ADO NET].ExternalColumns[GastoMedicamento_ID]"
+                          lineageId="Package\Alergia y relation10\Relation10\Consulta DB DW.Outputs[Salida de origen de ADO NET].Columns[GastoMedicamento_ID]"
                           name="GastoMedicamento_ID"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
-                          refId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Consulta DB DW.Outputs[Salida de origen de ADO NET].Columns[alergiaID]"
+                          refId="Package\Alergia y relation10\Relation10\Consulta DB DW.Outputs[Salida de origen de ADO NET].Columns[alergiaID]"
                           dataType="i4"
                           errorOrTruncationOperation="Conversión"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Consulta DB DW.Outputs[Salida de origen de ADO NET].ExternalColumns[alergiaID]"
-                          lineageId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Consulta DB DW.Outputs[Salida de origen de ADO NET].Columns[alergiaID]"
+                          externalMetadataColumnId="Package\Alergia y relation10\Relation10\Consulta DB DW.Outputs[Salida de origen de ADO NET].ExternalColumns[alergiaID]"
+                          lineageId="Package\Alergia y relation10\Relation10\Consulta DB DW.Outputs[Salida de origen de ADO NET].Columns[alergiaID]"
                           name="alergiaID"
                           truncationRowDisposition="FailComponent" />
                       </outputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Consulta DB DW.Outputs[Salida de origen de ADO NET].ExternalColumns[GastoMedicamento_ID]"
+                          refId="Package\Alergia y relation10\Relation10\Consulta DB DW.Outputs[Salida de origen de ADO NET].ExternalColumns[GastoMedicamento_ID]"
                           dataType="i4"
                           name="GastoMedicamento_ID" />
                         <externalMetadataColumn
-                          refId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Consulta DB DW.Outputs[Salida de origen de ADO NET].ExternalColumns[alergiaID]"
+                          refId="Package\Alergia y relation10\Relation10\Consulta DB DW.Outputs[Salida de origen de ADO NET].ExternalColumns[alergiaID]"
                           dataType="i4"
                           name="alergiaID" />
                       </externalMetadataColumns>
                     </output>
                     <output
-                      refId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Consulta DB DW.Outputs[Salida de error de origen de ADO NET]"
+                      refId="Package\Alergia y relation10\Relation10\Consulta DB DW.Outputs[Salida de error de origen de ADO NET]"
                       isErrorOut="true"
                       name="Salida de error de origen de ADO NET">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[GastoMedicamento_ID]"
+                          refId="Package\Alergia y relation10\Relation10\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[GastoMedicamento_ID]"
                           dataType="i4"
-                          lineageId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[GastoMedicamento_ID]"
+                          lineageId="Package\Alergia y relation10\Relation10\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[GastoMedicamento_ID]"
                           name="GastoMedicamento_ID" />
                         <outputColumn
-                          refId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[alergiaID]"
+                          refId="Package\Alergia y relation10\Relation10\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[alergiaID]"
                           dataType="i4"
-                          lineageId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[alergiaID]"
+                          lineageId="Package\Alergia y relation10\Relation10\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[alergiaID]"
                           name="alergiaID" />
                         <outputColumn
-                          refId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                          refId="Package\Alergia y relation10\Relation10\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                          lineageId="Package\Alergia y relation10\Relation10\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                          refId="Package\Alergia y relation10\Relation10\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                          lineageId="Package\Alergia y relation10\Relation10\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -834,7 +834,7 @@ WHERE
                   </outputs>
                 </component>
                 <component
-                  refId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Relation10 DW"
+                  refId="Package\Alergia y relation10\Relation10\Relation10 DW"
                   componentClassID="Microsoft.ManagedComponentHost"
                   contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
                   description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
@@ -869,7 +869,7 @@ WHERE
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Relation10 DW.Connections[IDbConnection]"
+                      refId="Package\Alergia y relation10\Relation10\Relation10 DW.Connections[IDbConnection]"
                       connectionManagerID="Package.ConnectionManagers[LocalHost.UCIDW]"
                       connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCIDW]"
                       description="Administrador de conexiones administrado"
@@ -877,32 +877,32 @@ WHERE
                   </connections>
                   <inputs>
                     <input
-                      refId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Relation10 DW.Inputs[Entrada de destino de ADO NET]"
+                      refId="Package\Alergia y relation10\Relation10\Relation10 DW.Inputs[Entrada de destino de ADO NET]"
                       errorRowDisposition="FailComponent"
                       hasSideEffects="true"
                       name="Entrada de destino de ADO NET">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Relation10 DW.Inputs[Entrada de destino de ADO NET].Columns[alergiaID]"
+                          refId="Package\Alergia y relation10\Relation10\Relation10 DW.Inputs[Entrada de destino de ADO NET].Columns[alergiaID]"
                           cachedDataType="i4"
                           cachedName="alergiaID"
-                          externalMetadataColumnId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Relation10 DW.Inputs[Entrada de destino de ADO NET].ExternalColumns[Alergia_alergiaID]"
-                          lineageId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Consulta DB DW.Outputs[Salida de origen de ADO NET].Columns[alergiaID]" />
+                          externalMetadataColumnId="Package\Alergia y relation10\Relation10\Relation10 DW.Inputs[Entrada de destino de ADO NET].ExternalColumns[Alergia_alergiaID]"
+                          lineageId="Package\Alergia y relation10\Relation10\Consulta DB DW.Outputs[Salida de origen de ADO NET].Columns[alergiaID]" />
                         <inputColumn
-                          refId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Relation10 DW.Inputs[Entrada de destino de ADO NET].Columns[GastoMedicamento_ID]"
+                          refId="Package\Alergia y relation10\Relation10\Relation10 DW.Inputs[Entrada de destino de ADO NET].Columns[GastoMedicamento_ID]"
                           cachedDataType="i4"
                           cachedName="GastoMedicamento_ID"
-                          externalMetadataColumnId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Relation10 DW.Inputs[Entrada de destino de ADO NET].ExternalColumns[GastoMedicamento_GastoMedicamento_ID]"
-                          lineageId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Consulta DB DW.Outputs[Salida de origen de ADO NET].Columns[GastoMedicamento_ID]" />
+                          externalMetadataColumnId="Package\Alergia y relation10\Relation10\Relation10 DW.Inputs[Entrada de destino de ADO NET].ExternalColumns[GastoMedicamento_GastoMedicamento_ID]"
+                          lineageId="Package\Alergia y relation10\Relation10\Consulta DB DW.Outputs[Salida de origen de ADO NET].Columns[GastoMedicamento_ID]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Relation10 DW.Inputs[Entrada de destino de ADO NET].ExternalColumns[Alergia_alergiaID]"
+                          refId="Package\Alergia y relation10\Relation10\Relation10 DW.Inputs[Entrada de destino de ADO NET].ExternalColumns[Alergia_alergiaID]"
                           dataType="i4"
                           name="Alergia_alergiaID" />
                         <externalMetadataColumn
-                          refId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Relation10 DW.Inputs[Entrada de destino de ADO NET].ExternalColumns[GastoMedicamento_GastoMedicamento_ID]"
+                          refId="Package\Alergia y relation10\Relation10\Relation10 DW.Inputs[Entrada de destino de ADO NET].ExternalColumns[GastoMedicamento_GastoMedicamento_ID]"
                           dataType="i4"
                           name="GastoMedicamento_GastoMedicamento_ID" />
                       </externalMetadataColumns>
@@ -910,22 +910,22 @@ WHERE
                   </inputs>
                   <outputs>
                     <output
-                      refId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Relation10 DW.Outputs[Salida de error de destino de ADO NET]"
+                      refId="Package\Alergia y relation10\Relation10\Relation10 DW.Outputs[Salida de error de destino de ADO NET]"
                       exclusionGroup="1"
                       isErrorOut="true"
                       name="Salida de error de destino de ADO NET"
-                      synchronousInputId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Relation10 DW.Inputs[Entrada de destino de ADO NET]">
+                      synchronousInputId="Package\Alergia y relation10\Relation10\Relation10 DW.Inputs[Entrada de destino de ADO NET]">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Relation10 DW.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                          refId="Package\Alergia y relation10\Relation10\Relation10 DW.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Relation10 DW.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                          lineageId="Package\Alergia y relation10\Relation10\Relation10 DW.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Relation10 DW.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                          refId="Package\Alergia y relation10\Relation10\Relation10 DW.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Relation10 DW.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                          lineageId="Package\Alergia y relation10\Relation10\Relation10 DW.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -936,10 +936,10 @@ WHERE
               </components>
               <paths>
                 <path
-                  refId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!).Paths[Salida de origen de ADO NET]"
-                  endId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Relation10 DW.Inputs[Entrada de destino de ADO NET]"
+                  refId="Package\Alergia y relation10\Relation10.Paths[Salida de origen de ADO NET]"
+                  endId="Package\Alergia y relation10\Relation10\Relation10 DW.Inputs[Entrada de destino de ADO NET]"
                   name="Salida de origen de ADO NET"
-                  startId="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Consulta DB DW.Outputs[Salida de origen de ADO NET]" />
+                  startId="Package\Alergia y relation10\Relation10\Consulta DB DW.Outputs[Salida de origen de ADO NET]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
@@ -953,7 +953,7 @@ WHERE
           DTS:From="Package\Alergia y relation10\Alergia"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Restricción"
-          DTS:To="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)" />
+          DTS:To="Package\Alergia y relation10\Relation10" />
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
     <DTS:Executable
@@ -6660,13 +6660,13 @@ FROM InfusionDrug</property>
       <DTS:Variables />
       <DTS:Executables>
         <DTS:Executable
-          DTS:refId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)"
+          DTS:refId="Package\Tratamiento y Relation11\Relation11"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Tarea Flujo de datos"
           DTS:DTSID="{85738D27-B9FF-41F0-B1C9-F297A2962ABE}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
-          DTS:ObjectName="Relation11(POR COMPLETAR AL FINAL!)"
+          DTS:ObjectName="Relation11"
           DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
           <DTS:ObjectData>
@@ -6674,7 +6674,7 @@ FROM InfusionDrug</property>
               version="1">
               <components>
                 <component
-                  refId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Consulta DB DW"
+                  refId="Package\Tratamiento y Relation11\Relation11\Consulta DB DW"
                   componentClassID="Microsoft.ManagedComponentHost"
                   contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
                   description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
@@ -6728,7 +6728,7 @@ WHERE
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Consulta DB DW.Connections[IDbConnection]"
+                      refId="Package\Tratamiento y Relation11\Relation11\Consulta DB DW.Connections[IDbConnection]"
                       connectionManagerID="Package.ConnectionManagers[LocalHost.eICU Collaborative Research Database]"
                       connectionManagerRefId="Package.ConnectionManagers[LocalHost.eICU Collaborative Research Database]"
                       description="Administrador de conexiones administrado"
@@ -6736,65 +6736,65 @@ WHERE
                   </connections>
                   <outputs>
                     <output
-                      refId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Consulta DB DW.Outputs[Salida de origen de ADO NET]"
+                      refId="Package\Tratamiento y Relation11\Relation11\Consulta DB DW.Outputs[Salida de origen de ADO NET]"
                       name="Salida de origen de ADO NET">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Consulta DB DW.Outputs[Salida de origen de ADO NET].Columns[GastoMedicamento_ID]"
+                          refId="Package\Tratamiento y Relation11\Relation11\Consulta DB DW.Outputs[Salida de origen de ADO NET].Columns[GastoMedicamento_ID]"
                           dataType="i4"
                           errorOrTruncationOperation="Conversión"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Consulta DB DW.Outputs[Salida de origen de ADO NET].ExternalColumns[GastoMedicamento_ID]"
-                          lineageId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Consulta DB DW.Outputs[Salida de origen de ADO NET].Columns[GastoMedicamento_ID]"
+                          externalMetadataColumnId="Package\Tratamiento y Relation11\Relation11\Consulta DB DW.Outputs[Salida de origen de ADO NET].ExternalColumns[GastoMedicamento_ID]"
+                          lineageId="Package\Tratamiento y Relation11\Relation11\Consulta DB DW.Outputs[Salida de origen de ADO NET].Columns[GastoMedicamento_ID]"
                           name="GastoMedicamento_ID"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
-                          refId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Consulta DB DW.Outputs[Salida de origen de ADO NET].Columns[tratamientoID]"
+                          refId="Package\Tratamiento y Relation11\Relation11\Consulta DB DW.Outputs[Salida de origen de ADO NET].Columns[tratamientoID]"
                           dataType="i4"
                           errorOrTruncationOperation="Conversión"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Consulta DB DW.Outputs[Salida de origen de ADO NET].ExternalColumns[tratamientoID]"
-                          lineageId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Consulta DB DW.Outputs[Salida de origen de ADO NET].Columns[tratamientoID]"
+                          externalMetadataColumnId="Package\Tratamiento y Relation11\Relation11\Consulta DB DW.Outputs[Salida de origen de ADO NET].ExternalColumns[tratamientoID]"
+                          lineageId="Package\Tratamiento y Relation11\Relation11\Consulta DB DW.Outputs[Salida de origen de ADO NET].Columns[tratamientoID]"
                           name="tratamientoID"
                           truncationRowDisposition="FailComponent" />
                       </outputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Consulta DB DW.Outputs[Salida de origen de ADO NET].ExternalColumns[GastoMedicamento_ID]"
+                          refId="Package\Tratamiento y Relation11\Relation11\Consulta DB DW.Outputs[Salida de origen de ADO NET].ExternalColumns[GastoMedicamento_ID]"
                           dataType="i4"
                           name="GastoMedicamento_ID" />
                         <externalMetadataColumn
-                          refId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Consulta DB DW.Outputs[Salida de origen de ADO NET].ExternalColumns[tratamientoID]"
+                          refId="Package\Tratamiento y Relation11\Relation11\Consulta DB DW.Outputs[Salida de origen de ADO NET].ExternalColumns[tratamientoID]"
                           dataType="i4"
                           name="tratamientoID" />
                       </externalMetadataColumns>
                     </output>
                     <output
-                      refId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Consulta DB DW.Outputs[Salida de error de origen de ADO NET]"
+                      refId="Package\Tratamiento y Relation11\Relation11\Consulta DB DW.Outputs[Salida de error de origen de ADO NET]"
                       isErrorOut="true"
                       name="Salida de error de origen de ADO NET">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[GastoMedicamento_ID]"
+                          refId="Package\Tratamiento y Relation11\Relation11\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[GastoMedicamento_ID]"
                           dataType="i4"
-                          lineageId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[GastoMedicamento_ID]"
+                          lineageId="Package\Tratamiento y Relation11\Relation11\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[GastoMedicamento_ID]"
                           name="GastoMedicamento_ID" />
                         <outputColumn
-                          refId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[tratamientoID]"
+                          refId="Package\Tratamiento y Relation11\Relation11\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[tratamientoID]"
                           dataType="i4"
-                          lineageId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[tratamientoID]"
+                          lineageId="Package\Tratamiento y Relation11\Relation11\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[tratamientoID]"
                           name="tratamientoID" />
                         <outputColumn
-                          refId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                          refId="Package\Tratamiento y Relation11\Relation11\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                          lineageId="Package\Tratamiento y Relation11\Relation11\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                          refId="Package\Tratamiento y Relation11\Relation11\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                          lineageId="Package\Tratamiento y Relation11\Relation11\Consulta DB DW.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -6803,7 +6803,7 @@ WHERE
                   </outputs>
                 </component>
                 <component
-                  refId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Relation11 DW"
+                  refId="Package\Tratamiento y Relation11\Relation11\Relation11 DW"
                   componentClassID="Microsoft.ManagedComponentHost"
                   contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
                   description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
@@ -6838,7 +6838,7 @@ WHERE
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Relation11 DW.Connections[IDbConnection]"
+                      refId="Package\Tratamiento y Relation11\Relation11\Relation11 DW.Connections[IDbConnection]"
                       connectionManagerID="Package.ConnectionManagers[LocalHost.UCIDW]"
                       connectionManagerRefId="Package.ConnectionManagers[LocalHost.UCIDW]"
                       description="Administrador de conexiones administrado"
@@ -6846,32 +6846,32 @@ WHERE
                   </connections>
                   <inputs>
                     <input
-                      refId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Relation11 DW.Inputs[Entrada de destino de ADO NET]"
+                      refId="Package\Tratamiento y Relation11\Relation11\Relation11 DW.Inputs[Entrada de destino de ADO NET]"
                       errorRowDisposition="FailComponent"
                       hasSideEffects="true"
                       name="Entrada de destino de ADO NET">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Relation11 DW.Inputs[Entrada de destino de ADO NET].Columns[tratamientoID]"
+                          refId="Package\Tratamiento y Relation11\Relation11\Relation11 DW.Inputs[Entrada de destino de ADO NET].Columns[tratamientoID]"
                           cachedDataType="i4"
                           cachedName="tratamientoID"
-                          externalMetadataColumnId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Relation11 DW.Inputs[Entrada de destino de ADO NET].ExternalColumns[Tratamiento_tratamientoID]"
-                          lineageId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Consulta DB DW.Outputs[Salida de origen de ADO NET].Columns[tratamientoID]" />
+                          externalMetadataColumnId="Package\Tratamiento y Relation11\Relation11\Relation11 DW.Inputs[Entrada de destino de ADO NET].ExternalColumns[Tratamiento_tratamientoID]"
+                          lineageId="Package\Tratamiento y Relation11\Relation11\Consulta DB DW.Outputs[Salida de origen de ADO NET].Columns[tratamientoID]" />
                         <inputColumn
-                          refId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Relation11 DW.Inputs[Entrada de destino de ADO NET].Columns[GastoMedicamento_ID]"
+                          refId="Package\Tratamiento y Relation11\Relation11\Relation11 DW.Inputs[Entrada de destino de ADO NET].Columns[GastoMedicamento_ID]"
                           cachedDataType="i4"
                           cachedName="GastoMedicamento_ID"
-                          externalMetadataColumnId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Relation11 DW.Inputs[Entrada de destino de ADO NET].ExternalColumns[GastoMedicamento_GastoMedicamento_ID]"
-                          lineageId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Consulta DB DW.Outputs[Salida de origen de ADO NET].Columns[GastoMedicamento_ID]" />
+                          externalMetadataColumnId="Package\Tratamiento y Relation11\Relation11\Relation11 DW.Inputs[Entrada de destino de ADO NET].ExternalColumns[GastoMedicamento_GastoMedicamento_ID]"
+                          lineageId="Package\Tratamiento y Relation11\Relation11\Consulta DB DW.Outputs[Salida de origen de ADO NET].Columns[GastoMedicamento_ID]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Relation11 DW.Inputs[Entrada de destino de ADO NET].ExternalColumns[Tratamiento_tratamientoID]"
+                          refId="Package\Tratamiento y Relation11\Relation11\Relation11 DW.Inputs[Entrada de destino de ADO NET].ExternalColumns[Tratamiento_tratamientoID]"
                           dataType="i4"
                           name="Tratamiento_tratamientoID" />
                         <externalMetadataColumn
-                          refId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Relation11 DW.Inputs[Entrada de destino de ADO NET].ExternalColumns[GastoMedicamento_GastoMedicamento_ID]"
+                          refId="Package\Tratamiento y Relation11\Relation11\Relation11 DW.Inputs[Entrada de destino de ADO NET].ExternalColumns[GastoMedicamento_GastoMedicamento_ID]"
                           dataType="i4"
                           name="GastoMedicamento_GastoMedicamento_ID" />
                       </externalMetadataColumns>
@@ -6879,22 +6879,22 @@ WHERE
                   </inputs>
                   <outputs>
                     <output
-                      refId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Relation11 DW.Outputs[Salida de error de destino de ADO NET]"
+                      refId="Package\Tratamiento y Relation11\Relation11\Relation11 DW.Outputs[Salida de error de destino de ADO NET]"
                       exclusionGroup="1"
                       isErrorOut="true"
                       name="Salida de error de destino de ADO NET"
-                      synchronousInputId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Relation11 DW.Inputs[Entrada de destino de ADO NET]">
+                      synchronousInputId="Package\Tratamiento y Relation11\Relation11\Relation11 DW.Inputs[Entrada de destino de ADO NET]">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Relation11 DW.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                          refId="Package\Tratamiento y Relation11\Relation11\Relation11 DW.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Relation11 DW.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                          lineageId="Package\Tratamiento y Relation11\Relation11\Relation11 DW.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Relation11 DW.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                          refId="Package\Tratamiento y Relation11\Relation11\Relation11 DW.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Relation11 DW.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                          lineageId="Package\Tratamiento y Relation11\Relation11\Relation11 DW.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -6905,10 +6905,10 @@ WHERE
               </components>
               <paths>
                 <path
-                  refId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!).Paths[Salida de origen de ADO NET]"
-                  endId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Relation11 DW.Inputs[Entrada de destino de ADO NET]"
+                  refId="Package\Tratamiento y Relation11\Relation11.Paths[Salida de origen de ADO NET]"
+                  endId="Package\Tratamiento y Relation11\Relation11\Relation11 DW.Inputs[Entrada de destino de ADO NET]"
                   name="Salida de origen de ADO NET"
-                  startId="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Consulta DB DW.Outputs[Salida de origen de ADO NET]" />
+                  startId="Package\Tratamiento y Relation11\Relation11\Consulta DB DW.Outputs[Salida de origen de ADO NET]" />
               </paths>
             </pipeline>
           </DTS:ObjectData>
@@ -7227,7 +7227,7 @@ WHERE
           DTS:From="Package\Tratamiento y Relation11\Tratamiento"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Restricción"
-          DTS:To="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)" />
+          DTS:To="Package\Tratamiento y Relation11\Relation11" />
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
   </DTS:Executables>
@@ -7346,23 +7346,23 @@ WHERE
           Id="Package\Alergia y relation10\Alergia"
           TopLeft="105.771430399102,3.3882350394058" />
         <NodeLayout
-          Size="271.2,41.6"
-          Id="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)"
-          TopLeft="21.4857159339655,95.1529408413234" />
+          Size="128,41.6"
+          Id="Package\Alergia y relation10\Relation10"
+          TopLeft="90.8734711837146,97.337814788988" />
         <EdgeLayout
           Id="Package\Alergia y relation10.PrecedenceConstraints[Restricción]"
-          TopLeft="159.028573166534,44.9882350394058">
+          TopLeft="157.922450791408,44.9882350394058">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,50.1647058019176"
+              EndConnector="0,52.3495797495822"
               Start="0,0"
-              End="0,42.6647058019176">
+              End="0,44.8495797495822">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,42.6647058019176" />
+                    End="0,44.8495797495822" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7473,27 +7473,27 @@ WHERE
           Id="Package\Paciente"
           TopLeft="528.571429696617,264.39999970373" />
         <NodeLayout
-          Size="268.8,41.6"
-          Id="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)"
-          TopLeft="28.7714297924117,89.0588233672005" />
+          Size="128,41.6"
+          Id="Package\Tratamiento y Relation11\Relation11"
+          TopLeft="100.200001373036,98.8907561316918" />
         <NodeLayout
           Size="135.2,41.6"
           Id="Package\Tratamiento y Relation11\Tratamiento"
           TopLeft="94.4857156465858,5.70588226379198" />
         <EdgeLayout
           Id="Package\Tratamiento y Relation11.PrecedenceConstraints[Restricción]"
-          TopLeft="162.628572719499,47.305882263792">
+          TopLeft="163.142858509811,47.305882263792">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,41.7529411034086"
+              EndConnector="0,51.5848738678998"
               Start="0,0"
-              End="0,34.2529411034086">
+              End="0,44.0848738678998">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.2529411034086" />
+                    End="0,44.0848738678998" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7505,8 +7505,8 @@ WHERE
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="302.4,181.6"
-          Size="302.4,224.8"
+          PanelSize="302.4,195.2"
+          Size="302.4,238.4"
           Id="Package\Tratamiento y Relation11"
           TopLeft="619.714285918036,667.835293856232" />
         <EdgeLayout
@@ -7673,9 +7673,9 @@ WHERE
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-176.723810125941,66.8941173373828"
+              EndConnector="-176.723810125942,66.894117337383"
               Start="0,0"
-              End="-176.723810125941,59.3941173373828">
+              End="-176.723810125942,59.394117337383">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -7686,13 +7686,13 @@ WHERE
                     Point2="0,27.0992339171015"
                     Point3="-4,27.0992339171015" />
                   <mssgle:LineSegment
-                    End="-172.723810125941,27.0992339171015" />
+                    End="-172.723810125942,27.0992339171015" />
                   <mssgle:CubicBezierSegment
-                    Point1="-172.723810125941,27.0992339171015"
-                    Point2="-176.723810125941,27.0992339171015"
-                    Point3="-176.723810125941,31.0992339171015" />
+                    Point1="-172.723810125942,27.0992339171015"
+                    Point2="-176.723810125942,27.0992339171015"
+                    Point3="-176.723810125942,31.0992339171015" />
                   <mssgle:LineSegment
-                    End="-176.723810125941,59.3941173373828" />
+                    End="-176.723810125942,59.394117337383" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7775,26 +7775,26 @@ WHERE
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="151.380951530978,65.8000000797653"
+              EndConnector="151.380951530978,65.800000079765"
               Start="0,0"
-              End="151.380951530978,58.3000000797653">
+              End="151.380951530978,58.300000079765">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.6560000323134" />
+                    End="0,22.6560000323133" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,22.6560000323134"
-                    Point2="0,26.6560000323134"
-                    Point3="4,26.6560000323134" />
+                    Point1="0,22.6560000323133"
+                    Point2="0,26.6560000323133"
+                    Point3="4,26.6560000323133" />
                   <mssgle:LineSegment
-                    End="147.380951530978,26.6560000323134" />
+                    End="147.380951530978,26.6560000323133" />
                   <mssgle:CubicBezierSegment
-                    Point1="147.380951530978,26.6560000323134"
-                    Point2="151.380951530978,26.6560000323134"
-                    Point3="151.380951530978,30.6560000323134" />
+                    Point1="147.380951530978,26.6560000323133"
+                    Point2="151.380951530978,26.6560000323133"
+                    Point3="151.380951530978,30.6560000323133" />
                   <mssgle:LineSegment
-                    End="151.380951530978,58.3000000797653" />
+                    End="151.380951530978,58.300000079765" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7977,20 +7977,20 @@ WHERE
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)">
+    design-time-name="Package\Alergia y relation10\Relation10">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="148,41.6"
-          Id="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Relation10 DW"
+          Id="Package\Alergia y relation10\Relation10\Relation10 DW"
           TopLeft="397.499994158745,201.499997079372" />
         <NodeLayout
           Size="156,41.6"
-          Id="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Consulta DB DW"
+          Id="Package\Alergia y relation10\Relation10\Consulta DB DW"
           TopLeft="401.499994546175,53.4999997317791" />
         <EdgeLayout
-          Id="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!).Paths[Salida de origen de ADO NET]"
+          Id="Package\Alergia y relation10\Relation10.Paths[Salida de origen de ADO NET]"
           TopLeft="479.499994546175,95.0999997317791">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8937,20 +8937,20 @@ WHERE
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)">
+    design-time-name="Package\Tratamiento y Relation11\Relation11">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="156,41.6"
-          Id="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Consulta DB DW"
+          Id="Package\Tratamiento y Relation11\Relation11\Consulta DB DW"
           TopLeft="283.499995857477,55.4999992549419" />
         <NodeLayout
           Size="148,41.6"
-          Id="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Relation11 DW"
+          Id="Package\Tratamiento y Relation11\Relation11\Relation11 DW"
           TopLeft="280.499996349216,152.499998256564" />
         <EdgeLayout
-          Id="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!).Paths[Salida de origen de ADO NET]"
+          Id="Package\Tratamiento y Relation11\Relation11.Paths[Salida de origen de ADO NET]"
           TopLeft="357.999996103346,97.0999992549419">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -9049,7 +9049,7 @@ WHERE
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Consulta DB DW">
+    design-time-name="Package\Tratamiento y Relation11\Relation11\Consulta DB DW">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -9057,7 +9057,7 @@ WHERE
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Tratamiento y Relation11\Relation11(POR COMPLETAR AL FINAL!)\Relation11 DW">
+    design-time-name="Package\Tratamiento y Relation11\Relation11\Relation11 DW">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -9065,7 +9065,7 @@ WHERE
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Relation10 DW">
+    design-time-name="Package\Alergia y relation10\Relation10\Relation10 DW">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -9073,7 +9073,7 @@ WHERE
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Alergia y relation10\Relation10 (PR COMPLETAR AL FINAL!!!)\Consulta DB DW">
+    design-time-name="Package\Alergia y relation10\Relation10\Consulta DB DW">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
