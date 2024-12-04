@@ -3,9 +3,9 @@
 \contentsline {section}{\numberline {2}Objetivos}{2}{}%
 \contentsline {section}{\numberline {3}Almacén de Datos de NorthWind}{2}{}%
 \contentsline {subsection}{\numberline {3.1}Extracción, Transformación y Carga de Datos}{2}{}%
-\contentsline {section}{\numberline {4}Almacén de Datos de Gasto de Medicamento en UCI}{2}{}%
-\contentsline {subsection}{\numberline {4.1}Rediseño del Almacén}{2}{}%
-\contentsline {subsection}{\numberline {4.2}Extracción, Transformación y Carga de Datos}{2}{}%
-\contentsline {section}{\numberline {5}Dificultades Encontradas}{2}{}%
-\contentsline {section}{\numberline {6}Conclusión}{3}{}%
-\contentsline {section}{\numberline {7}Acceso al Repositorio}{4}{}%
+\contentsline {section}{\numberline {4}Almacén de Datos de Gasto de Medicamento en UCI}{3}{}%
+\contentsline {subsection}{\numberline {4.1}Rediseño del Almacén}{3}{}%
+\contentsline {subsection}{\numberline {4.2}Extracción, Transformación y Carga de Datos}{3}{}%
+\contentsline {section}{\numberline {5}Dificultades Encontradas}{3}{}%
+\contentsline {section}{\numberline {6}Conclusión}{4}{}%
+\contentsline {section}{\numberline {7}Acceso al Repositorio}{5}{}%

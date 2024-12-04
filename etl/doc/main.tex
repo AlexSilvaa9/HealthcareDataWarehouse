@@ -105,7 +105,49 @@ El objetivo principal de este trabajo es implementar procesos de extracción, tr
 
 \section{Almacén de Datos de NorthWind}
 
+ El objetivo de esta parte del proyecto consiste en construir un almacén de datos (\texttt{NorthwindDW}) a partir de la base de datos \texttt{Northwind}, ampliamente utilizada para prácticas educativas y de demostración. Para ello, se desarrolló un proceso de extracción, transformación y carga (ETL) que permite mover los datos desde la base de datos origen hacia el almacén, adaptándolos a su nueva estructura.
+
 \subsection{Extracción, Transformación y Carga de Datos}
+
+El flujo ETL diseñado se compone de múltiples tareas que se ejecutan de manera secuencial y/o paralela. Estas tareas incluyen la carga de diferentes dimensiones como \texttt{Employee}, \texttt{Category}, \texttt{Product}, entre otras, así como tablas relacionadas con jerarquías geográficas como \texttt{Continent}, \texttt{Country}, \texttt{State}, y \texttt{City}. Cada tarea se asegura de transformar los datos según las necesidades del almacén y garantizar su integridad y consistencia.
+\\
+
+En la Figura \ref{fig:NorthWind}, se presenta el flujo de control completo con todas las tareas ejecutadas satisfactoriamente. Este diagrama refleja el correcto funcionamiento del proceso ETL y el éxito en la carga de los datos.
+
+\begin{figure}[H]
+	\begin{center} 
+		\includegraphics[width=0.65\textwidth]{images/cargaNorthwind.png} % Cambia 1 a 0.5 o el valor deseado
+		\caption{Carga completa del almacén NorthwindDW}
+		\label{fig:NorthWind}
+	\end{center}
+\end{figure}
+
+Durante la implementación del proceso ETL (Extract, Transform, Load), se encontraron ciertas dificultades. Una de ellas ocurrió durante la carga de la tabla \texttt{Employee}. Al intentar insertar datos, surgió el siguiente error relacionado con restricciones de claves foráneas:
+
+\begin{verbatim}
+	[Empleado DW [68]] Error: An exception has occurred during 
+	data insertion, the message returned from the provider is: 
+	Se terminó la instrucción. Instrucción INSERT en conflicto 
+	con la restricción FOREIGN KEY SAME TABLE 'FK_Employee_Employee'. 
+	El conflicto ha aparecido en la base de datos 'NorthwindDW', 
+	tabla 'dbo.Employee', column 'EmployeeKey'.
+\end{verbatim}
+
+Este problema se debía a que la tabla \texttt{Employee} contenía una clave foránea que referenciaba a sí misma, lo cual generaba conflictos al insertar los datos en un orden incorrecto. Para resolverlo, se deshabilitaron temporalmente las restricciones de claves foráneas antes de la carga de datos mediante el comando SQL:
+
+\begin{verbatim}
+	EXEC sp_MSForEachTable 'ALTER TABLE ? NOCHECK CONSTRAINT ALL';
+\end{verbatim}
+
+Una vez finalizada la carga de datos, se volvieron a habilitar las restricciones para asegurar la integridad referencial del almacén con el siguiente comando:
+
+\begin{verbatim}
+	EXEC sp_MSForEachTable 'ALTER TABLE ? WITH CHECK CHECK CONSTRAINT ALL';
+\end{verbatim}
+
+Gracias a esta solución, el proceso de carga se completó exitosamente. Este incidente resalta la importancia de planificar adecuadamente la secuencia de carga de datos y manejar las restricciones de integridad de manera controlada.
+
+
 
 \section{Almacén de Datos de Gasto de Medicamento en UCI}
 
