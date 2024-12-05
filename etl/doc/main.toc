@@ -5,7 +5,13 @@
 \contentsline {subsection}{\numberline {3.1}Extracción, Transformación y Carga de Datos}{2}{}%
 \contentsline {section}{\numberline {4}Almacén de Datos de Gasto de Medicamento en UCI}{3}{}%
 \contentsline {subsection}{\numberline {4.1}Rediseño del Almacén}{3}{}%
-\contentsline {subsection}{\numberline {4.2}Extracción, Transformación y Carga de Datos}{3}{}%
-\contentsline {section}{\numberline {5}Dificultades Encontradas}{3}{}%
-\contentsline {section}{\numberline {6}Conclusión}{4}{}%
-\contentsline {section}{\numberline {7}Acceso al Repositorio}{5}{}%
+\contentsline {subsection}{\numberline {4.2}Creación de un Nuevo Proyecto en SQL Server Management Studio}{4}{}%
+\contentsline {paragraph}{Paso 1: Abrir SQL Server Management Studio}{4}{}%
+\contentsline {paragraph}{Paso 2: Iniciar un Nuevo Proyecto}{5}{}%
+\contentsline {paragraph}{Paso 3: Configurar Conexión a la Base de Datos}{5}{}%
+\contentsline {subsection}{\numberline {4.3}Extracción, Transformación y Carga de Datos}{5}{}%
+\contentsline {subsection}{\numberline {4.4}Borrado del Almacén}{5}{}%
+\contentsline {subsubsection}{\numberline {4.4.1}Integración del Eliminado de alamcén en SQL Server Management Studio (SSMS)}{7}{}%
+\contentsline {section}{\numberline {5}Dificultades Encontradas}{7}{}%
+\contentsline {section}{\numberline {6}Conclusión}{8}{}%
+\contentsline {section}{\numberline {7}Acceso al Repositorio}{9}{}%
