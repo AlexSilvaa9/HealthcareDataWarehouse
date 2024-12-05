@@ -1,0 +1,582 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.9.27)  5 DEC 2024 19:54
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**images.tex
+(./images.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-01-16>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count193
+\float@exts=\toks16
+\float@box=\box51
+\@float@everytoks=\toks17
+\@floatcapt=\box52
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks18
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen141
+\Gin@req@width=\dimen142
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count194
+\l__pdf_internal_box=\box53
+)
+(./images.aux)
+\openout1 = `images.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count195
+\scratchdimen=\dimen143
+\scratchbox=\box54
+\nofMPsegments=\count196
+\nofMParguments=\count197
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count198
+\MPscratchDim=\dimen144
+\MPnumerator=\count199
+\makeMPintoPDFobject=\count266
+\everyMPtoPDFconversion=\toks20
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+<./images/asignaciones/ingreso_uci.png, id=1, 513.117pt x 504.6855pt>
+File: ./images/asignaciones/ingreso_uci.png Graphic file (type png)
+<use ./images/asignaciones/ingreso_uci.png>
+Package pdftex.def Info: ./images/asignaciones/ingreso_uci.png  used on input l
+ine 7.
+(pdftex.def)             Requested size: 345.0pt x 339.33887pt.
+<./images/asignaciones/paciente.png, id=3, 516.7305pt x 507.69675pt>
+File: ./images/asignaciones/paciente.png Graphic file (type png)
+<use ./images/asignaciones/paciente.png>
+Package pdftex.def Info: ./images/asignaciones/paciente.png  used on input line
+ 12.
+(pdftex.def)             Requested size: 345.0pt x 338.96979pt.
+<./images/asignaciones/hospital.png, id=4, 513.117pt x 504.08325pt>
+File: ./images/asignaciones/hospital.png Graphic file (type png)
+<use ./images/asignaciones/hospital.png>
+Package pdftex.def Info: ./images/asignaciones/hospital.png  used on input line
+ 17.
+(pdftex.def)             Requested size: 345.0pt x 338.93393pt.
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/asignaciones/ingr
+eso_uci.png>]
+<./images/asignaciones/gasto_medicamento.png, id=12, 510.10574pt x 506.49225pt>
+
+File: ./images/asignaciones/gasto_medicamento.png Graphic file (type png)
+<use ./images/asignaciones/gasto_medicamento.png>
+Package pdftex.def Info: ./images/asignaciones/gasto_medicamento.png  used on i
+nput line 22.
+(pdftex.def)             Requested size: 345.0pt x 342.56308pt.
+ [2 <./images/asignaciones/paciente.png>]
+<./images/asignaciones/medicamento.png, id=17, 511.9125pt x 506.49225pt>
+File: ./images/asignaciones/medicamento.png Graphic file (type png)
+<use ./images/asignaciones/medicamento.png>
+Package pdftex.def Info: ./images/asignaciones/medicamento.png  used on input l
+ine 27.
+(pdftex.def)             Requested size: 345.0pt x 341.34972pt.
+ [3 <./images/asignaciones/hospital.png>]
+<./images/asignaciones/anyo.png, id=22, 516.12825pt x 506.49225pt>
+File: ./images/asignaciones/anyo.png Graphic file (type png)
+<use ./images/asignaciones/anyo.png>
+Package pdftex.def Info: ./images/asignaciones/anyo.png  used on input line 32.
+
+(pdftex.def)             Requested size: 345.0pt x 338.55974pt.
+ [4 <./images/asignaciones/gasto_medicamento.png>]
+<./images/asignaciones/alergia.png, id=27, 514.92375pt x 507.0945pt>
+File: ./images/asignaciones/alergia.png Graphic file (type png)
+<use ./images/asignaciones/alergia.png>
+Package pdftex.def Info: ./images/asignaciones/alergia.png  used on input line 
+37.
+(pdftex.def)             Requested size: 345.0pt x 339.75928pt.
+ [5 <./images/asignaciones/medicamento.png>]
+<./images/asignaciones/estancia_hospital.png, id=32, 516.7305pt x 506.49225pt>
+File: ./images/asignaciones/estancia_hospital.png Graphic file (type png)
+<use ./images/asignaciones/estancia_hospital.png>
+Package pdftex.def Info: ./images/asignaciones/estancia_hospital.png  used on i
+nput line 42.
+(pdftex.def)             Requested size: 345.0pt x 338.16559pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.43 ...images/asignaciones/estancia_hospital.png}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 43.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 43.
+! Missing $ inserted.
+<inserted text> 
+                $
+l.43 ...images/asignaciones/estancia_hospital.png}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[6 <./images/asignaciones/anyo.png>]
+<./images/asignaciones/region.png, id=37, 510.708pt x 504.08325pt>
+File: ./images/asignaciones/region.png Graphic file (type png)
+<use ./images/asignaciones/region.png>
+Package pdftex.def Info: ./images/asignaciones/region.png  used on input line 4
+7.
+(pdftex.def)             Requested size: 345.0pt x 340.5338pt.
+ [7 <./images/asignaciones/alergia.png>]
+<./images/asignaciones/tratamiento.png, id=43, 516.12825pt x 508.90125pt>
+File: ./images/asignaciones/tratamiento.png Graphic file (type png)
+<use ./images/asignaciones/tratamiento.png>
+Package pdftex.def Info: ./images/asignaciones/tratamiento.png  used on input l
+ine 52.
+(pdftex.def)             Requested size: 345.0pt x 340.17001pt.
+
+[8 <./images/asignaciones/estancia_hospital.png>]
+<./images/busquedas/ingreso_uci.png, id=50, 515.526pt x 507.0945pt>
+File: ./images/busquedas/ingreso_uci.png Graphic file (type png)
+<use ./images/busquedas/ingreso_uci.png>
+Package pdftex.def Info: ./images/busquedas/ingreso_uci.png  used on input line
+ 57.
+(pdftex.def)             Requested size: 345.0pt x 339.37239pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.58 ...on for ./images/busquedas/ingreso_uci.png}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.58 ...on for ./images/busquedas/ingreso_uci.png}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[9 <./images/asignaciones/region.png>]
+<./images/busquedas/hospital_con_region.png, id=55, 515.526pt x 506.49225pt>
+File: ./images/busquedas/hospital_con_region.png Graphic file (type png)
+<use ./images/busquedas/hospital_con_region.png>
+Package pdftex.def Info: ./images/busquedas/hospital_con_region.png  used on in
+put line 62.
+(pdftex.def)             Requested size: 345.0pt x 338.96935pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.63 .../images/busquedas/hospital_con_region.png}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.63 .../images/busquedas/hospital_con_region.png}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[10 <./images/asignaciones/tratamiento.png>]
+<./images/cargaNorthWind.png, id=60, 906.38625pt x 523.20468pt>
+File: ./images/cargaNorthWind.png Graphic file (type png)
+<use ./images/cargaNorthWind.png>
+Package pdftex.def Info: ./images/cargaNorthWind.png  used on input line 67.
+(pdftex.def)             Requested size: 345.0pt x 199.14716pt.
+ [11 <./images/busquedas/ingreso_uci.png>]
+<./images/tutorial/union_hospital_con_o_sin_region.png, id=65, 515.526pt x 507.
+69675pt>
+File: ./images/tutorial/union_hospital_con_o_sin_region.png Graphic file (type 
+png)
+<use ./images/tutorial/union_hospital_con_o_sin_region.png>
+Package pdftex.def Info: ./images/tutorial/union_hospital_con_o_sin_region.png 
+ used on input line 72.
+(pdftex.def)             Requested size: 345.0pt x 339.77547pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.73 ...orial/union_hospital_con_o_sin_region.png}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Double subscript.
+<argument> ...mages/tutorial/union_hospital_con_o_
+                                                  sin_region.png
+l.73 ...orial/union_hospital_con_o_sin_region.png}
+                                                  
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.73 ...orial/union_hospital_con_o_sin_region.png}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[12 <./images/busquedas/hospital_con_region.png>]
+<./images/tutorial/division_condicional_hospital_region_null.png, id=70, 461.32
+35pt x 504.08325pt>
+File: ./images/tutorial/division_condicional_hospital_region_null.png Graphic f
+ile (type png)
+<use ./images/tutorial/division_condicional_hospital_region_null.png>
+Package pdftex.def Info: ./images/tutorial/division_condicional_hospital_region
+_null.png  used on input line 77.
+(pdftex.def)             Requested size: 345.0pt x 376.98466pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.78 ...sion_condicional_hospital_region_null.png}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.78 ...sion_condicional_hospital_region_null.png}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.78 ...sion_condicional_hospital_region_null.png}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.78 ...sion_condicional_hospital_region_null.png}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (17.79381pt too wide) in paragraph at lines 78--78
+[]\OT1/cmr/m/n/10 Figure 15: Cap-tion for ./images/tutorial/division$[]\OML/cmm
+/m/it/10 ondicional[]ospital[]egion[]ull:png$ 
+ []
+
+[13 <./images/cargaNorthWind.png>]
+<./images/completados/ingreso_uci.png, id=76, 284.86424pt x 202.95825pt>
+File: ./images/completados/ingreso_uci.png Graphic file (type png)
+<use ./images/completados/ingreso_uci.png>
+Package pdftex.def Info: ./images/completados/ingreso_uci.png  used on input li
+ne 82.
+(pdftex.def)             Requested size: 345.0pt x 245.8187pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.83 ... for ./images/completados/ingreso_uci.png}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.83 ... for ./images/completados/ingreso_uci.png}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[14 <./images/tutorial/union_hospital_con_o_sin_region.png>]
+<./images/completados/paciente.png, id=81, 148.1535pt x 184.2885pt>
+File: ./images/completados/paciente.png Graphic file (type png)
+<use ./images/completados/paciente.png>
+Package pdftex.def Info: ./images/completados/paciente.png  used on input line 
+87.
+(pdftex.def)             Requested size: 345.0pt x 429.22556pt.
+ [15 <./images/tutorial/division_condicional_hospital_region_null.png>]
+<./images/completados/relation10.png, id=86, 162.6075pt x 152.36925pt>
+File: ./images/completados/relation10.png Graphic file (type png)
+<use ./images/completados/relation10.png>
+Package pdftex.def Info: ./images/completados/relation10.png  used on input lin
+e 92.
+(pdftex.def)             Requested size: 345.0pt x 323.30257pt.
+ [16 <./images/completados/ingreso_uci.png>]
+<./images/completados/hospital.png, id=91, 355.3275pt x 263.18324pt>
+File: ./images/completados/hospital.png Graphic file (type png)
+<use ./images/completados/hospital.png>
+Package pdftex.def Info: ./images/completados/hospital.png  used on input line 
+97.
+(pdftex.def)             Requested size: 345.0pt x 255.54044pt.
+ [17 <./images/completados/paciente.png>]
+<./images/completados/gasto_medicamento.png, id=96, 159.59625pt x 142.73325pt>
+File: ./images/completados/gasto_medicamento.png Graphic file (type png)
+<use ./images/completados/gasto_medicamento.png>
+Package pdftex.def Info: ./images/completados/gasto_medicamento.png  used on in
+put line 102.
+(pdftex.def)             Requested size: 345.0pt x 308.54964pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.103 ...images/completados/gasto_medicamento.png}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.103 ...images/completados/gasto_medicamento.png}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[18 <./images/completados/relation10.png>]
+<./images/completados/medicamento.png, id=101, 219.82124pt x 193.9245pt>
+File: ./images/completados/medicamento.png Graphic file (type png)
+<use ./images/completados/medicamento.png>
+Package pdftex.def Info: ./images/completados/medicamento.png  used on input li
+ne 107.
+(pdftex.def)             Requested size: 345.0pt x 304.36742pt.
+ [19 <./images/completados/hospital.png>]
+<./images/completados/anyo.png, id=107, 139.722pt x 134.30174pt>
+File: ./images/completados/anyo.png Graphic file (type png)
+<use ./images/completados/anyo.png>
+Package pdftex.def Info: ./images/completados/anyo.png  used on input line 112.
+
+(pdftex.def)             Requested size: 345.0pt x 331.62216pt.
+ [20 <./images/completados/gasto_medicamento.png>]
+<./images/completados/flujo_UCi_completado.png, id=112, 347.49825pt x 286.06876
+pt>
+File: ./images/completados/flujo_UCi_completado.png Graphic file (type png)
+<use ./images/completados/flujo_UCi_completado.png>
+Package pdftex.def Info: ./images/completados/flujo_UCi_completado.png  used on
+ input line 117.
+(pdftex.def)             Requested size: 345.0pt x 284.03394pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.118 ...ges/completados/flujo_UCi_completado.png}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.118 ...ges/completados/flujo_UCi_completado.png}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[21 <./images/completados/medicamento.png>]
+<./images/completados/borrado_almacen.png, id=117, 304.7385pt x 124.66576pt>
+File: ./images/completados/borrado_almacen.png Graphic file (type png)
+<use ./images/completados/borrado_almacen.png>
+Package pdftex.def Info: ./images/completados/borrado_almacen.png  used on inpu
+t line 122.
+(pdftex.def)             Requested size: 345.0pt x 141.14456pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.123 ..../images/completados/borrado_almacen.png}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.123 ..../images/completados/borrado_almacen.png}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[22 <./images/completados/anyo.png>]
+<./images/completados/alergia.png, id=122, 135.50626pt x 173.448pt>
+File: ./images/completados/alergia.png Graphic file (type png)
+<use ./images/completados/alergia.png>
+Package pdftex.def Info: ./images/completados/alergia.png  used on input line 1
+27.
+(pdftex.def)             Requested size: 345.0pt x 441.61694pt.
+<./images/completados/estancia_hospital.png, id=123, 191.5155pt x 208.98074pt>
+File: ./images/completados/estancia_hospital.png Graphic file (type png)
+<use ./images/completados/estancia_hospital.png>
+Package pdftex.def Info: ./images/completados/estancia_hospital.png  used on in
+put line 132.
+(pdftex.def)             Requested size: 345.0pt x 376.4903pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.133 ...images/completados/estancia_hospital.png}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.133 ...images/completados/estancia_hospital.png}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[23 <./images/completados/flujo_UCi_completado.png> <./images/completados/borra
+do_almacen.png>]
+<./images/completados/relation11.png, id=129, 149.358pt x 121.6545pt>
+File: ./images/completados/relation11.png Graphic file (type png)
+<use ./images/completados/relation11.png>
+Package pdftex.def Info: ./images/completados/relation11.png  used on input lin
+e 137.
+(pdftex.def)             Requested size: 345.0pt x 281.03387pt.
+ [24 <./images/completados/alergia.png>]
+<./images/completados/region.png, id=134, 146.34676pt x 174.6525pt>
+File: ./images/completados/region.png Graphic file (type png)
+<use ./images/completados/region.png>
+Package pdftex.def Info: ./images/completados/region.png  used on input line 14
+2.
+(pdftex.def)             Requested size: 345.0pt x 411.73393pt.
+ [25 <./images/completados/estancia_hospital.png>]
+<./images/completados/tratamiento.png, id=140, 165.61874pt x 133.6995pt>
+File: ./images/completados/tratamiento.png Graphic file (type png)
+<use ./images/completados/tratamiento.png>
+Package pdftex.def Info: ./images/completados/tratamiento.png  used on input li
+ne 147.
+(pdftex.def)             Requested size: 345.0pt x 278.54942pt.
+ [26 <./images/completados/relation11.png>]
+<./images/uma_logo.jpg, id=145, 965.6075pt x 965.6075pt>
+File: ./images/uma_logo.jpg Graphic file (type jpg)
+<use ./images/uma_logo.jpg>
+Package pdftex.def Info: ./images/uma_logo.jpg  used on input line 152.
+(pdftex.def)             Requested size: 345.0pt x 344.99579pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.153 ...aption{Caption for ./images/uma_logo.jpg}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.153 ...aption{Caption for ./images/uma_logo.jpg}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[27 <./images/completados/region.png>]
+<./images/nuevo_diseno.png, id=150, 593.21625pt x 470.9595pt>
+File: ./images/nuevo_diseno.png Graphic file (type png)
+<use ./images/nuevo_diseno.png>
+Package pdftex.def Info: ./images/nuevo_diseno.png  used on input line 157.
+(pdftex.def)             Requested size: 345.0pt x 273.90407pt.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.158 ...on{Caption for ./images/nuevo_diseno.png}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.158 ...on{Caption for ./images/nuevo_diseno.png}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[28 <./images/completados/tratamiento.png>] [29 <./images/uma_logo.jpg>]
+[30 <./images/nuevo_diseno.png>] (./images.aux) ) 
+Here is how much of TeX's memory you used:
+ 1560 strings out of 476091
+ 30544 string characters out of 5794081
+ 1851330 words of memory out of 5000000
+ 21960 multiletter control sequences out of 15000+600000
+ 512287 words of font info for 32 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 57i,6n,62p,214b,226s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr10.pfb>
+Output written on images.pdf (30 pages, 1671302 bytes).
+PDF statistics:
+ 177 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 156 words of extra memory for PDF output out of 10000 (max. 10000000)
+

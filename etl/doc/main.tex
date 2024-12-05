@@ -105,7 +105,7 @@ El objetivo principal de este trabajo es implementar procesos de extracción, tr
 
 \section{Almacén de Datos de NorthWind}
 
- El objetivo de esta parte del proyecto consiste en construir un almacén de datos (\texttt{NorthwindDW}) a partir de la base de datos \texttt{Northwind}, ampliamente utilizada para prácticas educativas y de demostración. Para ello, se desarrolló un proceso de extracción, transformación y carga (ETL) que permite mover los datos desde la base de datos origen hacia el almacén, adaptándolos a su nueva estructura.
+ El objetivo de esta parte del proyecto consiste en construir un almacén de datos (\texttt{NorthwindDW}) a partir de la base de datos \texttt{Northwind}. Para ello, se desarrolló un proceso de extracción, transformación y carga (ETL) que permite mover los datos desde la base de datos origen hacia el almacén, adaptándolos a su nueva estructura.
 
 \subsection{Extracción, Transformación y Carga de Datos}
 
@@ -164,7 +164,7 @@ Como se puede observar en la Figura \ref{fig:nuevo_diseño}, este rediseño incl
 \begin{itemize}
 	\item \textbf{Autogeneración de identificadores (IDs):} En el nuevo diseño, los identificadores principales de las tablas ahora son generados automáticamente por el sistema, en lugar de depender de los valores provenientes de la base de datos de origen. Esto asegura consistencia y evita problemas de duplicados.
 	
-	\item \textbf{Preservación de IDs originales como atributos:} Los identificadores originales de la base de datos de origen se han mantenido, pero ahora figuran como atributos adicionales en las clases correspondientes. Esto permite rastrear fácilmente el origen de los datos y establecer vínculos con sistemas externos cuando sea necesario.
+	\item \textbf{Preservación de IDs originales como atributos:} Los identificadores originales de la base de datos de origen se han mantenido, pero ahora figuran como atributos adicionales en las clases correspondientes codificadas como "nombre[clase]" .Esto permite rastrear fácilmente el origen de los datos y establecer vínculos con sistemas externos cuando sea necesario.
 	
 	\item \textbf{Adición de nuevos atributos:} Se han incorporado más atributos en algunas tablas para enriquecer la información almacenada. Por ejemplo:
 	\begin{itemize}
