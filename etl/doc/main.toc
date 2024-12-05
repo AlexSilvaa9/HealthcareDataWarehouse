@@ -10,8 +10,25 @@
 \contentsline {paragraph}{Paso 2: Iniciar un Nuevo Proyecto}{5}{}%
 \contentsline {paragraph}{Paso 3: Configurar Conexión a la Base de Datos}{5}{}%
 \contentsline {subsection}{\numberline {4.3}Extracción, Transformación y Carga de Datos}{5}{}%
-\contentsline {subsection}{\numberline {4.4}Borrado del Almacén}{5}{}%
-\contentsline {subsubsection}{\numberline {4.4.1}Integración del Eliminado de alamcén en SQL Server Management Studio (SSMS)}{7}{}%
-\contentsline {section}{\numberline {5}Dificultades Encontradas}{7}{}%
-\contentsline {section}{\numberline {6}Conclusión}{8}{}%
-\contentsline {section}{\numberline {7}Acceso al Repositorio}{9}{}%
+\contentsline {subsubsection}{\numberline {4.3.1}Borrado del Almacén}{5}{}%
+\contentsline {subsection}{\numberline {4.4}Añadiendo el Procedimiento de Borrado al Proyecto}{7}{}%
+\contentsline {paragraph}{Paso 1: Abrir el Editor de Tareas SQL}{7}{}%
+\contentsline {paragraph}{Paso 2: Configurar la Tarea}{7}{}%
+\contentsline {paragraph}{Paso 3: Guardar y Probar}{7}{}%
+\contentsline {paragraph}{Visualización del Proceso}{8}{}%
+\contentsline {subsubsection}{\numberline {4.4.1}Tabla Employee}{8}{}%
+\contentsline {subsubsection}{\numberline {4.4.2}Tabla Category}{8}{}%
+\contentsline {subsubsection}{\numberline {4.4.3}Tabla Product}{8}{}%
+\contentsline {subsubsection}{\numberline {4.4.4}Tabla Supplier}{8}{}%
+\contentsline {subsubsection}{\numberline {4.4.5}Tabla Sales}{8}{}%
+\contentsline {subsubsection}{\numberline {4.4.6}Tabla Shipper}{8}{}%
+\contentsline {subsubsection}{\numberline {4.4.7}Tabla Customer}{8}{}%
+\contentsline {subsubsection}{\numberline {4.4.8}Tabla Territory}{9}{}%
+\contentsline {subsubsection}{\numberline {4.4.9}Tablas de jerarquías geográficas}{9}{}%
+\contentsline {subsubsection}{\numberline {4.4.10}Tabla Time}{9}{}%
+\contentsline {subsubsection}{\numberline {4.4.11}Tabla TemporalCities}{9}{}%
+\contentsline {subsubsection}{\numberline {4.4.12}Tabla WarehouseCleanup}{9}{}%
+\contentsline {subsection}{\numberline {4.5}Carga completa del almacén}{10}{}%
+\contentsline {section}{\numberline {5}Dificultades Encontradas}{10}{}%
+\contentsline {section}{\numberline {6}Conclusión}{10}{}%
+\contentsline {section}{\numberline {7}Acceso al Repositorio}{12}{}%
