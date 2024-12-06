@@ -192,10 +192,9 @@
 	\begin{enumerate}
 		\item En el menú principal de SSMS, haz clic en \textbf{Archivo} (\textit{File}).
 		\item Selecciona \textbf{Nuevo Proyecto} (\textit{New Project}).
-		\item En la ventana emergente, selecciona el tipo de proyecto llamado \textbf{Proyecto de Base de Datos} (\textit{Database Project}). Este tipo de proyecto te permite gestionar el desarrollo de bases de datos de manera organizada.
-		\item Asigna un nombre a tu proyecto en el campo \textbf{Nombre del Proyecto} (\textit{Project Name}), como por ejemplo: \texttt{BorradoAlmacenProyecto}.
-		\item Elige una ubicación para guardar tu proyecto en el campo \textbf{Ubicación} (\textit{Location}). Asegúrate de seleccionar una carpeta fácil de localizar.
-		\item Si es necesario, selecciona también un \textbf{Nombre de Solución} (\textit{Solution Name}). Esto es útil si planeas agrupar varios proyectos relacionados.
+		\item En la ventana emergente, selecciona el tipo de proyecto llamado \textbf{Proyecto de Base de Datos} (\textit{Database Project}).
+		\item Asigna un nombre a tu proyecto en el campo \textbf{Nombre del Proyecto} (\textit{Project Name}), como por ejemplo: \texttt{etl\_uciDW}.
+		\item Elige una ubicación para guardar tu proyecto en el campo \textbf{Ubicación} (\textit{Location}).
 		\item Haz clic en \textbf{Aceptar} (\textit{OK}) para crear el proyecto.
 	\end{enumerate}
 	
@@ -216,7 +215,7 @@
 	\subsection{Extracción, Transformación y Carga de Datos}
 	
 	\subsection{Flujo general de carga del almacén}
-	Antes de pasar explicando en detalle la carga de cada tabla, observamos en la Figura \ref{fig:flujo_general} el flujo general de la carga. Por un lado se cargan las tablas más simples (Medicamento, Paciente y Anyo) que se mapean directamente en el almacen, por otro lado se cargan las dimensiones con dos niveles (Estancia Hosiptal-Ingreso UCI y Hospital-Región) que necesitarán que sean cargadas de forma secuencial. Después se añadirá el hecho y por último las relaciones M:N con el hecho. Para garantizar que no hay problemas con duplicados borraremos el almacén al principio del flujo en cada ejecución.
+	Antes de pasar explicando en detalle la carga de cada tabla, observamos en la Figura \ref{fig:flujo_general} el flujo general de la carga. Por un lado se cargan las tablas más simples (Medicamento, Paciente y Anyo) que se mapean directamente en el almacén, por otro lado se cargan las dimensiones con dos niveles (Estancia Hosiptal-Ingreso UCI y Hospital-Región) que necesitarán que sean cargadas de forma secuencial. Después se añadirá el hecho y por último las relaciones M:N con el hecho. Para garantizar que no hay problemas con duplicados borraremos el almacén al principio del flujo en cada ejecución.
 	\begin{figure}[H]
 		\centering
 		\label{fig:flujo_general}
@@ -334,7 +333,7 @@
 	\end{figure}
 	
 	\subsection{Paciente}
-	La primera de las tablas simples son paciente, ya que se extraerá la inforcación directamente de la base de datos y despues de una conversión de datos estará listo para ser cargado en el almacén.
+	La primera de las tablas simples son paciente, ya que se extraerá la información directamente de la base de datos y después de una conversión de datos estará listo para ser cargado en el almacén.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=.7\linewidth]{./images/asignaciones/paciente.png}
@@ -347,7 +346,7 @@
 	\end{figure}
 
 	\subsection{Medicamento}
-	De forma analoga, la tabla medicamento del almacén será cargada solamente con el nombre de droga de la tabla medicamento  de la base de datos y una clave autogenerada.
+	De forma análoga, la tabla medicamento del almacén será cargada solamente con el nombre de droga de la tabla medicamento  de la base de datos y una clave autogenerada.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=.7\linewidth]{./images/asignaciones/medicamento.png}
@@ -375,9 +374,9 @@
 
 
 	\subsection{Estancia Hospital y Ingreso en UCI}
-	Continuamos con la carga de las dimensiones de dos niveles, se complica un poco ya que un nivel depende del otro.
+	Continuamos con el proceso de carga de dimensiones jerárquicas de dos niveles. Este procedimiento presenta cierta complejidad debido a la dependencia jerárquica entre los niveles, donde un nivel superior actúa como referencia para el inferior.
 	\subsubsection{Estancia Hospital}
-	La estancia hospital esta guardado en la tabla paciente de la base de datos , guardamos la fuente de admosion el estado de halta y la clave de la basse de datos para poder trazar cada estancia y poder cargar el ingreso en uci. La clave de esta tabla será autogenerada.
+	La estancia hospital esta guardado en la tabla paciente de la base de datos, guardamos la fuente de admisión el estado de alta y la clave de la base de datos para poder trazar cada estancia y poder cargar el ingreso en UCI. La clave de esta tabla será autogenerada.
 		\begin{figure}[H]
 		\centering
 		\includegraphics[width=.7\linewidth]{./images/asignaciones/estancia_hospital.png}
@@ -391,7 +390,7 @@
 		\caption{Completado Estancia hospital}
 	\end{figure}
 	\subsubsection{Ingreso UCI}
-	Como podemos ver en el flujo de esta tarea, obtendremos la tabla paciente de la base de datos y buscaremos en nuestro almacén que clave tiene la estancia de hospital correspondiente a cada ingreso en UCI, ya que este tambien esta guardado en la tabla paciente.
+	Como se observa en el flujo de esta tarea, es necesario realizar una búsqueda en nuestro almacén para identificar la clave de la estancia hospitalaria correspondiente a cada ingreso en UCI. Estos datos se encuentran registrados en la tabla paciente, que obtenemos desde la base de datos. 
 		\begin{figure}[H]
 		\centering
 		\includegraphics[width=.5\linewidth]{./images/completados/ingreso_uci.png}
@@ -402,28 +401,39 @@
 		\includegraphics[width=.7\linewidth]{./images/busquedas/ingreso_uci.png}
 		\caption{Busqueda ingreso UCI}
 	\end{figure}
+	Posteriormente, se llevarán a cabo las asignaciones necesarias, tal como se detalla en la Figura \ref{fig:asignaciones_uci}.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=.7\linewidth]{./images/asignaciones/ingreso_uci.png}
 		\caption{Asignaciones Ingreso UCI}
+		\label{fig:asignaciones_uci}
 	\end{figure}
 
 	\subsection{Región y Hospital}
-	De forma analoga a la anterior, cargaremos la tabla región y despues la tabla hospital
+	De forma análoga a la anterior, cargaremos la tabla región y después la tabla hospital
 	\subsubsection{Región}
-	En esta tabla tendremos una clave autogenerada y el unico atributo es el nombre de la región.
+	En esta tabla tendremos una clave autogenerada y el único atributo es el nombre de la región.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=.7\linewidth]{./images/asignaciones/region.png}
-		\caption{Asignaciones Region}
+		\caption{Asignaciones Región}
 	\end{figure}
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=.3\linewidth]{./images/completados/region.png}
-		\caption{Completado Region}
+		\caption{Completado Región}
 	\end{figure}
 	\subsubsection{Hospital}
-	Esta será la tabla más compleja de toda la garga del almacen de datos, ya que tenemos que tener en cuenta que hay hospitales cullo atributo región es nulo. Buscaremos todos los hospitales en la base de datos y haremos una division de los hospitales con y sin region. Los que tengan región se hará una busqueda en el almacén para obtener su clave y se unirá todo y cargará en la tabla hospital de nuestro almacen.
+	Esta será la tabla más compleja de toda la carga del almacén de datos debido a las particularidades de los datos, en especial el manejo de hospitales cuyo atributo \textbf{región} es nulo.
+	
+	El proceso comienza obteniendo todos los hospitales desde la base de datos. Posteriormente, se realiza una \textbf{división condicional} (Figura \ref{fig:division_hospital}) para separar los hospitales en dos grupos: 
+	
+	\begin{itemize}
+		\item \textbf{Hospitales con región:} Para este grupo, se realiza una búsqueda en el almacén de datos con el objetivo de obtener la clave correspondiente a cada región.
+		\item \textbf{Hospitales sin región:} Estos registros no requieren la búsqueda de una clave de región, pero deben ser preparados para la integración final.
+	\end{itemize}
+	
+	
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=.7\linewidth]{./images/completados/hospital.png}
@@ -432,28 +442,35 @@
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=.7\linewidth]{./images/busquedas/hospital_con_region.png}
-		\caption{Busqueda Hospital con region}
+		\caption{Busqueda de Hospital con región}
 	\end{figure}
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=.7\linewidth]{./images/tutorial/union_hospital_con_o_sin_region.png}
-		\caption{Busqueda Hospital sin region}
+		\caption{Busqueda de Hospital sin región}
 	\end{figure}
+	Finalmente, ambos conjuntos de datos, los hospitales con región (tras realizar la búsqueda) y los hospitales sin región, se \textbf{unen} en una única estructura de datos. Una vez unidos, los datos pasan por una etapa de transformación adicional (\textit{Conversión de datos}) para garantizar su formato correcto antes de cargarlos en la tabla \textit{Hospital} del almacén de datos.
+
+	Este flujo de procesamiento está diseñado para garantizar que todos los registros, independientemente de la disponibilidad del atributo región, se integren correctamente en el almacén de datos. 
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=.7\linewidth]{./images/tutorial/division_condicional_hospital_region_null.png}
-		\caption{Division condicional}
+		\caption{División condicional}
+		\label{fig:division_hospital}
 	\end{figure}
 		\begin{figure}[H]
 		\centering
 		\includegraphics[width=.7\linewidth]{./images/asignaciones/hospital.png}
-		\caption{Asignaciones hospital}
+		\caption{Asignaciones de hospital}
 	\end{figure}
 	
 	\subsection{Gasto Medicamento}
 	
 	
-	Para cargar la tabla de gasto de medicamento se ha optado en construir una consulta para unir todas las tablas necesarias y con las restricciones obtener directamente lo que tenemos que cargar en nuestro almacén Listing \ref{lst:hecho}.
+	Para la carga de la tabla de gasto de medicamentos, se ha construido una consulta SQL que une todas las tablas necesarias mediante relaciones clave y aplica restricciones para filtrar los datos relevantes.
+	\\
+	
+	La consulta selecciona los campos esenciales relacionados con tasas de infusión, volúmenes de fluidos, cantidades de medicamentos, e identificadores únicos de pacientes, años, hospitales, ingresos en UCI y medicamentos. Además, incluye condiciones en el bloque WHERE para garantizar que los registros no tengan valores nulos en los campos clave, asegurando así la calidad de los datos antes de la carga en el almacén (Listing \ref{lst:hecho}).
 	\begin{lstlisting}[style=ddlstyle, label=lst:hecho,caption=Consulta para llenado de hecho]
 	SELECT 
 	infDB.InfusionRate, 
@@ -507,7 +524,7 @@
 	\subsection{Alergia y Relation10}
 	Alergia y su tabla intermedia Relation 10 serán cargada de forma secuencial.
 	\subsubsection{Alergia}
-	De forma simple se mapea la tabla de alergia de la base de datos en la tabla de nuestro almacen, pero quedandonos solo con el nombre de la alergia, tipo de alergia y nombre de la droga(en el caso de que el tipo de alergia sea a un medicamento)
+	La tabla de alergias de la base de datos se mapea de forma sencilla en la tabla correspondiente de nuestro almacén de datos. Sin embargo, solo se conservan los campos relevantes: el nombre de la alergia, el tipo de alergia y, en los casos donde el tipo de alergia corresponde a un medicamento, el nombre de la droga asociada.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=.7\linewidth]{./images/asignaciones/alergia.png}
@@ -520,7 +537,7 @@
 	\end{figure}
 	\subsubsection{Relation10}
 	
-	Para cargar esta tabla tambien es más claro y sencillo utilizar la consulta Listing \ref{lst:relation10} para cargar las claves de las alergias y del gasto de medicamento del almacne de datos en la tabla intermedia.
+	Para cargar esta tabla también es más claro y sencillo utilizar la consulta Listing \ref{lst:relation10} para cargar las claves de las alergias y del gasto de medicamento del almacén de datos en la tabla intermedia.
 	\begin{lstlisting}[style=ddlstyle, label=lst:relation10,caption=Consulta para llenado de relacion 10]
 		SELECT DISTINCT
 	
@@ -540,6 +557,7 @@
 	allDB.AllergyName = allDW.nombreAlergia 
 	\end{lstlisting}
 
+	La consulta SQL obtiene combinaciones únicas de \textbf{gasto de medicamentos} y \textbf{alergias} al unir las tablas de la base de datos (\textit{eICU Collaborative Research Database}) y el almacén de datos (\textit{UCIDW}). Se vinculan los registros de medicamentos administrados y las alergias mediante el identificador de estancia del paciente (\texttt{PatientUnitStayID}), y luego se relacionan con los datos de gasto de medicamento y alergia en el almacén. El resultado es una lista de combinaciones únicas entre \textbf{gasto de medicamentos} y \textbf{alergias}.
 	
 	
 	
@@ -550,9 +568,9 @@
 		\caption{Completado Relation10}
 	\end{figure}
 	\subsection{Tratamiento y Relation11}
-	De manera analoga al anterior se cargará la tabla tratamiento y la relacion intermedia entre este y el gasto de medicamento.
+	De manera análoga al anterior se cargará la tabla tratamiento y la relación intermedia entre este y el gasto de medicamento.
 	\subsubsection{Tratamiento}
-	De nuevo la carga de tratamiento es un sencillo mapeo de la base de datos a el almacen de datos quedandonos con la descripcion. En este caso además nos quedaremos con el id de la base de datos para poder identificar cada tratamiento y sus relaciones en nuestro almacen, aunque la clave será autogenerada
+	La carga de la tabla de tratamiento consiste de nuevo en un mapeo directo de los datos desde la base de datos hacia el almacén de datos, conservando únicamente la descripción del tratamiento. Adicionalmente, se incluirá el identificador único de la base de datos para poder identificar cada tratamiento y sus relaciones dentro del almacén, aunque la clave principal en el almacén será autogenerada.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=.7\linewidth]{./images/asignaciones/tratamiento.png}
@@ -566,7 +584,6 @@
 	\subsubsection{Relation11}
 	De la misma forma a la relacion 10, será mas sencillo utilizar la consulta Listing \ref{lst:relation11} para quedarnos con las claves de tratamiento y gasto en medicamento de nuestro almacen que estan relacionadas.
 	
-	Consulta para llenado de relacion 11
 	\begin{lstlisting}[style=ddlstyle, label=lst:relation11,caption=Consulta para llenado de relacion 11]
 	SELECT 
 	
@@ -587,6 +604,7 @@
 	
 	\end{lstlisting}
 
+	La consulta SQL obtiene las combinaciones de \textbf{gasto de medicamentos} y \textbf{tratamientos} al unir las tablas de la base de datos (\textit{eICU Collaborative Research Database}) y el almacén de datos (\textit{UCIDW}). Se relacionan los registros de medicamentos administrados y tratamientos mediante el identificador de estancia del paciente (\texttt{PatientUnitStayID}), y luego se vinculan con los datos correspondientes en el almacén, utilizando los identificadores de gasto de medicamento (\texttt{nombre\_gasto\_medicamento}) y tratamiento (\texttt{nombreTratamiento}). El resultado es una lista de combinaciones entre \textbf{gasto de medicamentos} y \textbf{tratamientos}.
 	
 	
 	\begin{figure}[H]
@@ -599,7 +617,7 @@
 	\subsection{Dificultades Encontradas}
 	\label{sec:dificultades_encontradas}
 	
-	El principal contratiempo que hemos encontrado ha sido encontrar la forma de que las relaciones de la base de datos fuesen consistentes con las relaciones de el almacén de datos ya que nuestro diseño inicial solo se guardaba una clave autogenerada por tabla del almacén de datos. Para solucionarlo, rediseñamos el almacen como se explicó en la seccion anterior con el objetivo de guardar un atributo con el id de la base de datos y que las relaciones sean coherentes. Cabe puntualizar que esto ha sido añadido en las tablas donde sería imposible buscar sin tener ese identificador.
+	El principal contratiempo que hemos encontrado ha sido encontrar la forma de que las relaciones de la base de datos fuesen consistentes con las relaciones de el almacén de datos ya que nuestro diseño inicial solo se guardaba una clave autogenerada por tabla del almacén de datos. Para solucionarlo, rediseñamos el almacén como se explicó en la sección anterior con el objetivo de guardar un atributo con el id de la base de datos y que las relaciones sean coherentes. Cabe puntualizar que esto ha sido añadido en las tablas donde sería imposible buscar sin tener ese identificador.
 	
 	\section{Conclusión}
 	\label{sec:conclusion}
