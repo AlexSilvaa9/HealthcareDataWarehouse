@@ -105,7 +105,7 @@
 	
 	\section{Almacén de Datos de NorthWind}
 	
-	El objetivo de esta parte del proyecto consiste en construir un almacén de datos (\texttt{NorthwindDW}) a partir de la base de datos \texttt{Northwind}, ampliamente utilizada para prácticas educativas y de demostración. Para ello, se desarrolló un proceso de extracción, transformación y carga (ETL) que permite mover los datos desde la base de datos origen hacia el almacén, adaptándolos a su nueva estructura.
+	El objetivo de esta parte del proyecto consiste en construir un almacén de datos (\texttt{NorthwindDW}) a partir de la base de datos \texttt{Northwind}. Para ello, se desarrolló un proceso de extracción, transformación y carga (ETL) que permite mover los datos desde la base de datos origen hacia el almacén, adaptándolos a su nueva estructura.
 	
 	\subsection{Extracción, Transformación y Carga de Datos}
 	
@@ -122,28 +122,31 @@
 		\end{center}
 	\end{figure}
 	
-	Durante la implementación del proceso ETL (Extract, Transform, Load), se encontraron ciertas dificultades. Una de ellas ocurrió durante la carga de la tabla \texttt{Employee}. Al intentar insertar datos, surgió el siguiente error relacionado con restricciones de claves foráneas:
+	\subsection{Dificultades encontradas}
+	Durante la implementación del proceso ETL (Extract, Transform, Load), se encontraron ciertas dificultades. Una de ellas ocurrió durante la carga de la tabla \texttt{Employee}. Al intentar insertar datos, surgió el siguiente error (Listing \ref{lst:error}) relacionado con restricciones de claves foráneas:
 	
-	\begin{verbatim}
-		[Empleado DW [68]] Error: An exception has occurred during 
-		data insertion, the message returned from the provider is: 
-		Se terminó la instrucción. Instrucción INSERT en conflicto 
-		con la restricción FOREIGN KEY SAME TABLE 'FK_Employee_Employee'. 
-		El conflicto ha aparecido en la base de datos 'NorthwindDW', 
-		tabla 'dbo.Employee', column 'EmployeeKey'.
-	\end{verbatim}
+	\begin{lstlisting}[style=ddlstyle, label=lst:error,caption=Error al llenar empleado]
+	[Empleado DW [68]] Error: An exception has occurred during 
+	data insertion, the message returned from the provider is: 
+	Se termino la instruccion. Instruccion INSERT en conflicto 
+	con la restriccion FOREIGN KEY SAME TABLE 'FK_Employee_Employee'. 
+	El conflicto ha aparecido en la base de datos 'NorthwindDW', 
+	tabla 'dbo.Employee', column 'EmployeeKey'.
+	\end{lstlisting}
 	
-	Este problema se debía a que la tabla \texttt{Employee} contenía una clave foránea que referenciaba a sí misma, lo cual generaba conflictos al insertar los datos en un orden incorrecto. Para resolverlo, se deshabilitaron temporalmente las restricciones de claves foráneas antes de la carga de datos mediante el comando SQL:
+	Este problema se debía a que la tabla \texttt{Employee} contenía una clave foránea que referenciaba a sí misma, lo cual generaba conflictos al insertar los datos en un orden incorrecto. Para resolverlo, se deshabilitaron temporalmente las restricciones de claves foráneas antes de la carga de datos mediante el comando Listing \ref{lst:Deshabilitar}.
 	
-	\begin{verbatim}
-		EXEC sp_MSForEachTable 'ALTER TABLE ? NOCHECK CONSTRAINT ALL';
-	\end{verbatim}
 	
-	Una vez finalizada la carga de datos, se volvieron a habilitar las restricciones para asegurar la integridad referencial del almacén con el siguiente comando:
+	\begin{lstlisting}[style=ddlstyle, label=lst:Deshabilitar,caption=Deshabilitar restricciones en empleado]
+	EXEC sp_MSForEachTable 'ALTER TABLE ? NOCHECK CONSTRAINT ALL';
+	\end{lstlisting}
 	
-	\begin{verbatim}
-		EXEC sp_MSForEachTable 'ALTER TABLE ? WITH CHECK CHECK CONSTRAINT ALL';
-	\end{verbatim}
+	Una vez finalizada la carga de datos, se volvieron a habilitar las restricciones para asegurar la integridad referencial del almacén con el siguiente comando Listing \ref{lst:Habilitar}
+	
+	
+	\begin{lstlisting}[style=ddlstyle, label=lst:Habilitar,caption=Habilitar restricciones en empleado]
+	EXEC sp_MSForEachTable 'ALTER TABLE ? WITH CHECK CHECK CONSTRAINT ALL';
+	\end{lstlisting}
 	
 	Gracias a esta solución, el proceso de carga se completó exitosamente. 
 	
@@ -164,7 +167,7 @@
 	\begin{itemize}
 		\item \textbf{Autogeneración de identificadores (IDs):} En el nuevo diseño, los identificadores principales de las tablas ahora son generados automáticamente por el sistema, en lugar de depender de los valores provenientes de la base de datos de origen. Esto asegura consistencia y evita problemas de duplicados.
 		
-		\item \textbf{Preservación de IDs originales como atributos:} Los identificadores originales de la base de datos de origen se han mantenido, pero ahora figuran como atributos adicionales en las clases correspondientes. Esto permite rastrear fácilmente el origen de los datos y establecer vínculos con sistemas externos cuando sea necesario.
+		\item \textbf{Preservación de IDs originales como atributos:} Los identificadores originales de la base de datos de origen se han mantenido, pero ahora figuran como atributos adicionales en las clases correspondientes. Esto permite rastrear fácilmente el origen de los datos y establecer vínculos con sistemas externos cuando sea necesario. Cabe puntualizar que esto ha sido solo añadido en las tablas donde sería imposible buscar sin tener ese identificador.
 		
 		\item \textbf{Adición de nuevos atributos:} Se han incorporado más atributos en algunas tablas para enriquecer la información almacenada. Por ejemplo:
 		\begin{itemize}
@@ -212,64 +215,56 @@
 	
 	\subsection{Extracción, Transformación y Carga de Datos}
 	
+	\subsection{Flujo general de carga del almacén}
+	Antes de pasar explicando en detalle la carga de cada tabla, observamos en la Figura \ref{fig:flujo_general} el flujo general de la carga. Por un lado se cargan las tablas más simples (Medicamento, Paciente y Anyo) que se mapean directamente en el almacen, por otro lado se cargan las dimensiones con dos niveles (Estancia Hosiptal-Ingreso UCI y Hospital-Región) que necesitarán que sean cargadas de forma secuencial. Después se añadirá el hecho y por último las relaciones M:N con el hecho. Para garantizar que no hay problemas con duplicados borraremos el almacén al principio del flujo en cada ejecución.
+	\begin{figure}[H]
+		\centering
+		\label{fig:flujo_general}
+		\includegraphics[width=\linewidth]{./images/completados/flujo_completo_uci.jpeg}
+		\caption{Carga completa del almacén UCI de gasto en medicamentos}
+	\end{figure}
 	\subsubsection{Borrado del Almacén}
 	
-	Para realizar el borrado completo del almacén de datos, es necesario crear un procedimiento almacenado en SQL Server Management Studio (SSMS). Esto se lleva a cabo en el almacén de datos vacío llamado \texttt{NorthwindDW}, accediendo a la sección \texttt{Programmability} y creando un nuevo \texttt{Stored Procedure}. 
+	Para realizar el borrado completo del almacén de datos, es necesario crear un procedimiento almacenado en SQL Server Management Studio (SSMS). Esto se lleva a cabo en el almacén de datos, accediendo a la sección \texttt{Programmability} y creando un nuevo \texttt{Stored Procedure}. \\
 	
 	El procedimiento debe incluir las instrucciones necesarias para eliminar los datos de las tablas en el orden correcto, comenzando por las tablas que tienen dependencias externas (o relaciones con otras tablas) y finalizando con aquellas más internas (las que no tienen dependencias hacia otras tablas). Esto asegura que las restricciones de claves foráneas no causen errores durante el proceso de eliminación.
 	
 	\begin{lstlisting}[style=ddlstyle, label=fig:borradoAlmacen,caption=Borrado del Almacen de UCI]
 		USE UCIDW;
 		GO
-		
 		SET ANSI_NULLS ON;
 		GO
 		SET QUOTED_IDENTIFIER ON;
 		GO
-		
 		CREATE OR ALTER PROCEDURE BorrarAlmacen	
 		AS
 		BEGIN
 		BEGIN TRY
 		-- Iniciar transaccion
 		BEGIN TRANSACTION;
-		
 		-- Eliminar datos de las tablas
-		
 		DELETE FROM Relation_10;
 		DELETE FROM Relation_11;
-		
 		DELETE FROM GastoMedicamento;
-		
-		
 		DELETE FROM Medicamento;
 		DELETE FROM Alergia;
 		DELETE FROM Anyo;
 		DELETE FROM Tratamiento;
-		
 		DELETE FROM Hospital;
 		DELETE FROM Region;
-		
 		DELETE FROM IngresoUCI;
 		DELETE FROM EstanciaHospital;
-		
 		DELETE FROM Paciente;
-		
-		
-		
 		-- Reiniciar los valores de identidad
 		DBCC CHECKIDENT ('Medicamento', RESEED, 0);
 		DBCC CHECKIDENT ('Alergia', RESEED, 0);
-		
 		DBCC CHECKIDENT ('Tratamiento', RESEED, 0);
 		DBCC CHECKIDENT ('Region', RESEED, 0);
 		DBCC CHECKIDENT ('Hospital', RESEED, 0);
 		DBCC CHECKIDENT ('EstanciaHospital', RESEED, 0);
 		DBCC CHECKIDENT ('IngresoUCI', RESEED, 0);
 		DBCC CHECKIDENT ('Paciente', RESEED, 0);
-		
 		DBCC CHECKIDENT ('GastoMedicamento', RESEED, 0);
-		
 		-- Confirmar transaccion
 		COMMIT TRANSACTION;
 		END TRY
@@ -277,7 +272,6 @@
 		-- Deshacer transaccion si ocurre un error
 		IF @@TRANCOUNT > 0
 		ROLLBACK TRANSACTION;
-		
 		-- Rethrow del error para depuracion
 		THROW;
 		END CATCH;
@@ -339,78 +333,280 @@
 		\end{center}
 	\end{figure}
 	
-	
-	
-	\subsubsection{Tabla Employee}
-	Esta tabla almacena información sobre los empleados, incluyendo su clave primaria (\texttt{EmployeeKey}), nombres, apellidos, cargos, y datos relacionados. Además, incluye una clave foránea que referencia al empleado que actúa como su superior jerárquico, permitiendo construir jerarquías dentro de la organización.
-	
-	\subsubsection{Tabla Category}
-	La tabla \texttt{Category} contiene información sobre las categorías de los productos, como su nombre, descripción y clave primaria (\texttt{CategoryKey}). Esta dimensión facilita el análisis de ventas y productos organizados por categorías.
-	
-	\subsubsection{Tabla Product}
-	La tabla \texttt{Product} registra los detalles de los productos disponibles, como su clave primaria (\texttt{ProductKey}), nombre, precio, e identificadores de las categorías y proveedores a los que pertenecen.
-	
-	\subsubsection{Tabla Supplier}
-	Esta tabla contiene información de los proveedores, incluyendo su clave primaria (\texttt{SupplierKey}), nombre, dirección, y otros datos de contacto. Es clave para relacionar productos con sus proveedores.
-	
-	\subsubsection{Tabla Sales}
-	La tabla \texttt{Sales} almacena información sobre las ventas realizadas, incluyendo claves foráneas que vinculan cada registro con las tablas de productos, empleados, clientes y dimensiones temporales. Es esencial para el análisis de rendimiento y generación de reportes.
-	
-	\subsubsection{Tabla Shipper}
-	Esta tabla contiene información sobre los transportistas utilizados para enviar los pedidos. Incluye campos como \texttt{ShipperKey}, nombre y detalles de contacto del transportista.
-	
-	\subsubsection{Tabla Customer}
-	La tabla \texttt{Customer} registra los datos de los clientes, incluyendo su clave primaria (\texttt{CustomerKey}), nombre, detalles de contacto, y otra información relevante. Es crucial para el análisis de clientes y segmentación.
-	
-	\subsubsection{Tabla Territory}
-	\texttt{Territory} describe las áreas geográficas asociadas a empleados y clientes. Contiene información como claves primarias (\texttt{TerritoryKey}) y descripciones de las regiones.
-	
-	\subsubsection{Tablas de jerarquías geográficas}
-	El almacén incluye un conjunto de tablas diseñadas para representar jerarquías geográficas:
-	
-	\begin{itemize}
-		\item \texttt{Continent}: Define los continentes donde se encuentran los países de operación.
-		\item \texttt{Country}: Contiene información de los países, vinculada a continentes.
-		\item \texttt{State}: Registra los estados o provincias dentro de los países.
-		\item \texttt{City}: Representa las ciudades asociadas a clientes, empleados y proveedores.
-	\end{itemize}
-	
-	Estas tablas permiten realizar análisis geográficos detallados, como ventas por región o país.
-	
-	\subsubsection{Tabla Time}
-	Esta tabla almacena datos de dimensión temporal, como días, meses, trimestres y años. Es fundamental para realizar análisis basados en periodos de tiempo específicos.
-	
-	\subsubsection{Tabla TemporalCities}
-	\texttt{TemporalCities} es una tabla intermedia utilizada durante el proceso ETL para manejar los datos de las ciudades antes de su integración final en la tabla \texttt{City}.
-	
-	\subsubsection{Tabla WarehouseCleanup}
-	Aunque no forma parte de las dimensiones analíticas, esta tabla se utiliza en el proceso ETL para gestionar la limpieza de datos previos al inicio de la carga.
-	
-	En conjunto, estas tablas forman la base del almacén \texttt{NorthwindDW}, permitiendo un análisis eficiente y organizado de los datos comerciales y operativos.
-	
-	\subsection{Carga completa del almacén}
+	\subsection{Paciente}
+	La primera de las tablas simples son paciente, ya que se extraerá la inforcación directamente de la base de datos y despues de una conversión de datos estará listo para ser cargado en el almacén.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.7\linewidth]{./images/asignaciones/paciente.png}
+		\caption{Asignaciones de paciente}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.3\linewidth]{./images/completados/paciente.png}
+		\caption{Paciente completado}
+	\end{figure}
+
+	\subsection{Medicamento}
+	De forma analoga, la tabla medicamento del almacén será cargada solamente con el nombre de droga de la tabla medicamento  de la base de datos y una clave autogenerada.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.7\linewidth]{./images/asignaciones/medicamento.png}
+		\caption{Asignaciones de medicamento}
+	\end{figure}
 	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=\linewidth]{./images/completados/flujo_completo_uci.jpeg}
-		\caption{Carga completa del almacén UCI de gasto en medicamentos}
+		\includegraphics[width=.3\linewidth]{./images/completados/medicamento.png}
+		\caption{Medicamento completado}
 	\end{figure}
 
-	\section{Dificultades Encontradas}
+	\subsection{Anyo}
+	El año tendrá una clave autogenerada y el atributo anyo será sacado de HospitalDischargeYear de la tabla paciente de la base de datos, indica el año de alta del paciente.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.7\linewidth]{./images/asignaciones/anyo.png}
+		\caption{Asignaciones anyo}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.3\linewidth]{./images/completados/anyo.png}
+		\caption{Anyo completado}
+	\end{figure}
+
+
+	\subsection{Estancia Hospital y Ingreso en UCI}
+	Continuamos con la carga de las dimensiones de dos niveles, se complica un poco ya que un nivel depende del otro.
+	\subsubsection{Estancia Hospital}
+	La estancia hospital esta guardado en la tabla paciente de la base de datos , guardamos la fuente de admosion el estado de halta y la clave de la basse de datos para poder trazar cada estancia y poder cargar el ingreso en uci. La clave de esta tabla será autogenerada.
+		\begin{figure}[H]
+		\centering
+		\includegraphics[width=.7\linewidth]{./images/asignaciones/estancia_hospital.png}
+		\caption{Asignaciones Estancia Hospital}
+	\end{figure}
+
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.3\linewidth]{./images/completados/estancia_hospital.png}
+		\caption{Completado Estancia hospital}
+	\end{figure}
+	\subsubsection{Ingreso UCI}
+	Como podemos ver en el flujo de esta tarea, obtendremos la tabla paciente de la base de datos y buscaremos en nuestro almacén que clave tiene la estancia de hospital correspondiente a cada ingreso en UCI, ya que este tambien esta guardado en la tabla paciente.
+		\begin{figure}[H]
+		\centering
+		\includegraphics[width=.5\linewidth]{./images/completados/ingreso_uci.png}
+		\caption{Completado Ingreso UCI}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.7\linewidth]{./images/busquedas/ingreso_uci.png}
+		\caption{Busqueda ingreso UCI}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.7\linewidth]{./images/asignaciones/ingreso_uci.png}
+		\caption{Asignaciones Ingreso UCI}
+	\end{figure}
+
+	\subsection{Región y Hospital}
+	De forma analoga a la anterior, cargaremos la tabla región y despues la tabla hospital
+	\subsubsection{Región}
+	En esta tabla tendremos una clave autogenerada y el unico atributo es el nombre de la región.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.7\linewidth]{./images/asignaciones/region.png}
+		\caption{Asignaciones Region}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.3\linewidth]{./images/completados/region.png}
+		\caption{Completado Region}
+	\end{figure}
+	\subsubsection{Hospital}
+	Esta será la tabla más compleja de toda la garga del almacen de datos, ya que tenemos que tener en cuenta que hay hospitales cullo atributo región es nulo. Buscaremos todos los hospitales en la base de datos y haremos una division de los hospitales con y sin region. Los que tengan región se hará una busqueda en el almacén para obtener su clave y se unirá todo y cargará en la tabla hospital de nuestro almacen.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.7\linewidth]{./images/completados/hospital.png}
+		\caption{Completado Hospital}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.7\linewidth]{./images/busquedas/hospital_con_region.png}
+		\caption{Busqueda Hospital con region}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.7\linewidth]{./images/tutorial/union_hospital_con_o_sin_region.png}
+		\caption{Busqueda Hospital sin region}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.7\linewidth]{./images/tutorial/division_condicional_hospital_region_null.png}
+		\caption{Division condicional}
+	\end{figure}
+		\begin{figure}[H]
+		\centering
+		\includegraphics[width=.7\linewidth]{./images/asignaciones/hospital.png}
+		\caption{Asignaciones hospital}
+	\end{figure}
+	
+	\subsection{Gasto Medicamento}
+	
+	
+	Para cargar la tabla de gasto de medicamento se ha optado en construir una consulta para unir todas las tablas necesarias y con las restricciones obtener directamente lo que tenemos que cargar en nuestro almacén Listing \ref{lst:hecho}.
+	\begin{lstlisting}[style=ddlstyle, label=lst:hecho,caption=Consulta para llenado de hecho]
+	SELECT 
+	infDB.InfusionRate, 
+	infDB.VolumeOfFluid, 
+	infDB.DrugAmount, 
+	paDW.uniquePID, 
+	anyDW.anyoID, 
+	hospDW.hospitalID, 
+	ingrDW.ingresoUCIID, 
+	medDW.medicamentoId,
+	infDB.InfusionDrugID 
+	FROM 
+	[eICU Collaborative Research Database].dbo.Patient paDB,
+	[eICU Collaborative Research Database].dbo.InfusionDrug infDB,
+	UCIDW.dbo.Paciente paDW,
+	UCIDW.dbo.Anyo anyDW,
+	UCIDW.dbo.Hospital hospDW,
+	UCIDW.dbo.IngresoUCI ingrDW,
+	UCIDW.dbo.Medicamento medDW
+	WHERE 
+	paDB.PatientUnitStayID = infDB.PatientUnitStayID 
+	AND paDW.nombrePaciente = paDB.UniquePID 
+	AND paDB.HospitalDischargeYear = anyDW.anyo 
+	AND paDB.HospitalID = hospDW.nombreHospital 
+	AND ingrDW.nombreIngresoUCI = paDB.PatientUnitStayID 
+	AND infDB.DrugName = medDW.nombreMedicamento 
+	AND infDB.InfusionRate IS NOT NULL
+	AND infDB.VolumeOfFluid IS NOT NULL
+	AND infDB.DrugAmount IS NOT NULL
+	AND paDW.uniquePID IS NOT NULL
+	AND anyDW.anyoID IS NOT NULL
+	AND hospDW.hospitalID IS NOT NULL
+	AND ingrDW.ingresoUCIID IS NOT NULL
+	AND medDW.medicamentoId IS NOT NULL;
+	\end{lstlisting}
+	
+	
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.7\linewidth]{./images/asignaciones/gasto_medicamento.png}
+		\caption{Asignaciones gasto medicamento}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.3\linewidth]{./images/completados/gasto_medicamento.png}
+		\caption{Completado gasto en medicamento}
+	\end{figure}
+	
+	Una vez hemos cargado el hecho podemos cargar las relaciones en las que participa el hecho con otra tabla con cardinalidad N:M
+	\subsection{Alergia y Relation10}
+	Alergia y su tabla intermedia Relation 10 serán cargada de forma secuencial.
+	\subsubsection{Alergia}
+	De forma simple se mapea la tabla de alergia de la base de datos en la tabla de nuestro almacen, pero quedandonos solo con el nombre de la alergia, tipo de alergia y nombre de la droga(en el caso de que el tipo de alergia sea a un medicamento)
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.7\linewidth]{./images/asignaciones/alergia.png}
+		\caption{Asignaciones Alergia}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.3\linewidth]{./images/completados/alergia.png}
+		\caption{Completado Alergia}
+	\end{figure}
+	\subsubsection{Relation10}
+	
+	Para cargar esta tabla tambien es más claro y sencillo utilizar la consulta Listing \ref{lst:relation10} para cargar las claves de las alergias y del gasto de medicamento del almacne de datos en la tabla intermedia.
+	\begin{lstlisting}[style=ddlstyle, label=lst:relation10,caption=Consulta para llenado de relacion 10]
+		SELECT DISTINCT
+	
+	gmDW.GastoMedicamento_ID, allDW.alergiaID
+	FROM 
+	[eICU Collaborative Research Database].dbo.Patient paDB,
+	[eICU Collaborative Research Database].dbo.InfusionDrug infDB,
+	[eICU Collaborative Research Database].dbo.Allergy allDB,
+	
+	UCIDW.dbo.GastoMedicamento gmDW,
+	UCIDW.dbo.Alergia allDW
+	WHERE 
+	paDB.PatientUnitStayID = infDB.PatientUnitStayID  AND 
+	paDB.PatientUnitStayID = allDB.PatientUnitStayID   AND
+	
+	gmDW.nombre_gasto_medicamento = infDB.InfusionDrugID AND
+	allDB.AllergyName = allDW.nombreAlergia 
+	\end{lstlisting}
+
+	
+	
+	
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.3\linewidth]{./images/completados/relation10.png}
+		\caption{Completado Relation10}
+	\end{figure}
+	\subsection{Tratamiento y Relation11}
+	De manera analoga al anterior se cargará la tabla tratamiento y la relacion intermedia entre este y el gasto de medicamento.
+	\subsubsection{Tratamiento}
+	De nuevo la carga de tratamiento es un sencillo mapeo de la base de datos a el almacen de datos quedandonos con la descripcion. En este caso además nos quedaremos con el id de la base de datos para poder identificar cada tratamiento y sus relaciones en nuestro almacen, aunque la clave será autogenerada
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.7\linewidth]{./images/asignaciones/tratamiento.png}
+		\caption{Asignación Tratamiento}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.3\linewidth]{./images/completados/tratamiento.png}
+		\caption{Completado Tratamiento}
+	\end{figure}
+	\subsubsection{Relation11}
+	De la misma forma a la relacion 10, será mas sencillo utilizar la consulta Listing \ref{lst:relation11} para quedarnos con las claves de tratamiento y gasto en medicamento de nuestro almacen que estan relacionadas.
+	
+	Consulta para llenado de relacion 11
+	\begin{lstlisting}[style=ddlstyle, label=lst:relation11,caption=Consulta para llenado de relacion 11]
+	SELECT 
+	
+	gmDW.GastoMedicamento_ID, trDW.tratamientoID 
+	FROM 
+	[eICU Collaborative Research Database].dbo.Patient paDB,
+	[eICU Collaborative Research Database].dbo.InfusionDrug infDB,
+	[eICU Collaborative Research Database].dbo.Treatment trDB,
+	
+	UCIDW.dbo.GastoMedicamento gmDW,
+	UCIDW.dbo.Tratamiento trDW
+	WHERE 
+	paDB.PatientUnitStayID = infDB.PatientUnitStayID  AND 
+	paDB.PatientUnitStayID = trDB.PatientUnitStayID  AND
+	
+	gmDW.nombre_gasto_medicamento = infDB.InfusionDrugID AND
+	trDW.nombreTratamiento = trDB.TreatmentID 
+	
+	\end{lstlisting}
+
+	
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.3\linewidth]{./images/completados/relation11.png}
+		\caption{Completado Relation11}
+	\end{figure}
+		
+
+	\subsection{Dificultades Encontradas}
 	\label{sec:dificultades_encontradas}
 	
-	A lo largo del proyecto nos hemos encontrado con varios obstáculos que nos han hecho replantear algunos aspectos del diseño del almacén de datos para la gestión hospitalaria:
-	
-	\begin{enumerate}
-		\item \textbf{}:
-	\end{enumerate}
-	
-	A pesar de estas dificultades, cada uno de estos retos nos ha ayudado a entender mejor las particularidades del sector salud y a preparar un diseño más sólido para el almacén de datos.
+	El principal contratiempo que hemos encontrado ha sido encontrar la forma de que las relaciones de la base de datos fuesen consistentes con las relaciones de el almacén de datos ya que nuestro diseño inicial solo se guardaba una clave autogenerada por tabla del almacén de datos. Para solucionarlo, rediseñamos el almacen como se explicó en la seccion anterior con el objetivo de guardar un atributo con el id de la base de datos y que las relaciones sean coherentes. Cabe puntualizar que esto ha sido añadido en las tablas donde sería imposible buscar sin tener ese identificador.
 	
 	\section{Conclusión}
 	\label{sec:conclusion}
 	
-	Gracias a la organización del almacén de datos, se optimiza la consulta de información relevante para la toma de decisiones, facilitando la identificación de patrones de gasto asociados a diversas variables, como tratamientos específicos o características de los pacientes. Esta estructura, además, sienta las bases para futuras ampliaciones o análisis más complejos, promoviendo la escalabilidad y adaptabilidad del sistema. En conclusión, el proyecto aporta un modelo sólido y adaptable para la gestión y análisis de datos en el ámbito hospitalario, contribuyendo a una administración más eficiente de los recursos y a una mejora potencial en la atención a los pacientes.
+	Gracias a la correcta implementación del proceso ETL, se ha logrado organizar el almacén de datos de manera eficiente, optimizando la consulta de información relevante para la toma de decisiones. Este proceso ha permitido integrar y transformar datos provenientes de \cite{eicu_crd}. Además, la estructura obtenida no solo asegura la calidad y consistencia de los datos, sino que también sienta las bases para futuras ampliaciones o análisis más complejos, promoviendo la escalabilidad y adaptabilidad del sistema.
+	
+	En conclusión, este proyecto ETL aporta un modelo sólido y adaptable para la gestión y análisis de datos en el ámbito hospitalario, contribuyendo a una administración más eficiente de los recursos y a una mejora potencial en la atención a los pacientes.
 	
 	\newpage
 	\section{Acceso al Repositorio}

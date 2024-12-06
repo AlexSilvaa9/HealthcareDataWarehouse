@@ -3,32 +3,37 @@
 \contentsline {section}{\numberline {2}Objetivos}{2}{}%
 \contentsline {section}{\numberline {3}Almacén de Datos de NorthWind}{2}{}%
 \contentsline {subsection}{\numberline {3.1}Extracción, Transformación y Carga de Datos}{2}{}%
-\contentsline {section}{\numberline {4}Almacén de Datos de Gasto de Medicamento en UCI}{3}{}%
-\contentsline {subsection}{\numberline {4.1}Rediseño del Almacén}{3}{}%
-\contentsline {subsection}{\numberline {4.2}Creación de un Nuevo Proyecto en SQL Server Management Studio}{4}{}%
-\contentsline {paragraph}{Paso 1: Abrir SQL Server Management Studio}{4}{}%
+\contentsline {subsection}{\numberline {3.2}Dificultades encontradas}{3}{}%
+\contentsline {section}{\numberline {4}Almacén de Datos de Gasto de Medicamento en UCI}{4}{}%
+\contentsline {subsection}{\numberline {4.1}Rediseño del Almacén}{4}{}%
+\contentsline {subsection}{\numberline {4.2}Creación de un Nuevo Proyecto en SQL Server Management Studio}{5}{}%
+\contentsline {paragraph}{Paso 1: Abrir SQL Server Management Studio}{5}{}%
 \contentsline {paragraph}{Paso 2: Iniciar un Nuevo Proyecto}{5}{}%
 \contentsline {paragraph}{Paso 3: Configurar Conexión a la Base de Datos}{5}{}%
 \contentsline {subsection}{\numberline {4.3}Extracción, Transformación y Carga de Datos}{5}{}%
-\contentsline {subsubsection}{\numberline {4.3.1}Borrado del Almacén}{5}{}%
-\contentsline {subsection}{\numberline {4.4}Añadiendo el Procedimiento de Borrado al Proyecto}{7}{}%
-\contentsline {paragraph}{Paso 1: Abrir el Editor de Tareas SQL}{7}{}%
-\contentsline {paragraph}{Paso 2: Configurar la Tarea}{7}{}%
-\contentsline {paragraph}{Paso 3: Guardar y Probar}{7}{}%
+\contentsline {subsection}{\numberline {4.4}Flujo general de carga del almacén}{5}{}%
+\contentsline {subsubsection}{\numberline {4.4.1}Borrado del Almacén}{6}{}%
+\contentsline {subsection}{\numberline {4.5}Añadiendo el Procedimiento de Borrado al Proyecto}{8}{}%
+\contentsline {paragraph}{Paso 1: Abrir el Editor de Tareas SQL}{8}{}%
+\contentsline {paragraph}{Paso 2: Configurar la Tarea}{8}{}%
+\contentsline {paragraph}{Paso 3: Guardar y Probar}{8}{}%
 \contentsline {paragraph}{Visualización del Proceso}{8}{}%
-\contentsline {subsubsection}{\numberline {4.4.1}Tabla Employee}{8}{}%
-\contentsline {subsubsection}{\numberline {4.4.2}Tabla Category}{8}{}%
-\contentsline {subsubsection}{\numberline {4.4.3}Tabla Product}{8}{}%
-\contentsline {subsubsection}{\numberline {4.4.4}Tabla Supplier}{8}{}%
-\contentsline {subsubsection}{\numberline {4.4.5}Tabla Sales}{8}{}%
-\contentsline {subsubsection}{\numberline {4.4.6}Tabla Shipper}{8}{}%
-\contentsline {subsubsection}{\numberline {4.4.7}Tabla Customer}{8}{}%
-\contentsline {subsubsection}{\numberline {4.4.8}Tabla Territory}{9}{}%
-\contentsline {subsubsection}{\numberline {4.4.9}Tablas de jerarquías geográficas}{9}{}%
-\contentsline {subsubsection}{\numberline {4.4.10}Tabla Time}{9}{}%
-\contentsline {subsubsection}{\numberline {4.4.11}Tabla TemporalCities}{9}{}%
-\contentsline {subsubsection}{\numberline {4.4.12}Tabla WarehouseCleanup}{9}{}%
-\contentsline {subsection}{\numberline {4.5}Carga completa del almacén}{10}{}%
-\contentsline {section}{\numberline {5}Dificultades Encontradas}{10}{}%
-\contentsline {section}{\numberline {6}Conclusión}{10}{}%
-\contentsline {section}{\numberline {7}Acceso al Repositorio}{12}{}%
+\contentsline {subsection}{\numberline {4.6}Paciente}{9}{}%
+\contentsline {subsection}{\numberline {4.7}Medicamento}{10}{}%
+\contentsline {subsection}{\numberline {4.8}Anyo}{11}{}%
+\contentsline {subsection}{\numberline {4.9}Estancia Hospital y Ingreso en UCI}{12}{}%
+\contentsline {subsubsection}{\numberline {4.9.1}Estancia Hospital}{12}{}%
+\contentsline {subsubsection}{\numberline {4.9.2}Ingreso UCI}{13}{}%
+\contentsline {subsection}{\numberline {4.10}Región y Hospital}{15}{}%
+\contentsline {subsubsection}{\numberline {4.10.1}Región}{15}{}%
+\contentsline {subsubsection}{\numberline {4.10.2}Hospital}{16}{}%
+\contentsline {subsection}{\numberline {4.11}Gasto Medicamento}{21}{}%
+\contentsline {subsection}{\numberline {4.12}Alergia y Relation10}{23}{}%
+\contentsline {subsubsection}{\numberline {4.12.1}Alergia}{23}{}%
+\contentsline {subsubsection}{\numberline {4.12.2}Relation10}{25}{}%
+\contentsline {subsection}{\numberline {4.13}Tratamiento y Relation11}{25}{}%
+\contentsline {subsubsection}{\numberline {4.13.1}Tratamiento}{25}{}%
+\contentsline {subsubsection}{\numberline {4.13.2}Relation11}{26}{}%
+\contentsline {subsection}{\numberline {4.14}Dificultades Encontradas}{27}{}%
+\contentsline {section}{\numberline {5}Conclusión}{27}{}%
+\contentsline {section}{\numberline {6}Acceso al Repositorio}{28}{}%
