@@ -1,0 +1,14 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Introducción}{2}{}%
+\contentsline {section}{\numberline {2}Objetivos}{2}{}%
+\contentsline {section}{\numberline {3}Dashboard}{2}{}%
+\contentsline {subsection}{\numberline {3.1}Preparación de los Datos}{2}{}%
+\contentsline {subsection}{\numberline {3.2}Creación del Dashboard}{3}{}%
+\contentsline {subsubsection}{\numberline {3.2.1}Diseño General}{3}{}%
+\contentsline {subsubsection}{\numberline {3.2.2}Tarjetas Resumen}{3}{}%
+\contentsline {subsubsection}{\numberline {3.2.3}Visualizaciones}{3}{}%
+\contentsline {subsubsection}{\numberline {3.2.4}Filtros y Segmentaciones}{4}{}%
+\contentsline {subsection}{\numberline {3.3}Formato y Estilo}{4}{}%
+\contentsline {section}{\numberline {4}Comprobación con consultas MDX}{5}{}%
+\contentsline {section}{\numberline {5}Conclusiones}{11}{}%
+\contentsline {section}{\numberline {6}Dificultades Encontradas}{11}{}%

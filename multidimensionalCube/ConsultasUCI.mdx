@@ -1,0 +1,203 @@
+
+--CONSULTAS UCI
+
+--1 Ranking de Hospitales según Volumen de Fluido
+
+WITH 
+    MEMBER [Measures].[Rank Hospitales] AS 
+        RANK([Hospital].[Hospital].CURRENTMEMBER, 
+             ORDER([Hospital].[Hospital].[Hospital].MEMBERS, 
+                   [Measures].[Volumen Fluido], BDESC))
+
+SELECT 
+    NON EMPTY 
+    ORDER(
+        FILTER(
+            [Hospital].[Hospital].[Hospital].MEMBERS,
+            NOT ISEMPTY([Measures].[Volumen Fluido])
+        ),
+        [Measures].[Rank Hospitales],
+        BASC
+    ) ON ROWS, 
+    {[Measures].[Volumen Fluido], [Measures].[Rank Hospitales]} ON COLUMNS
+FROM 
+    [UCIDW]
+
+
+-- 2 Los tres medicamentos más gastados por cada unidad de UCI
+WITH 
+    MEMBER [Measures].[Rank Medicamento] AS 
+        RANK(
+            [Medicamento].[Nombre Medicamento].CURRENTMEMBER,
+            ORDER(
+                [Medicamento].[Nombre Medicamento].children,
+                [Measures].[Cantidad], 
+                BDESC
+            )
+        )
+SELECT 
+    {[Measures].[Cantidad]} ON COLUMNS, 
+    NONEMPTY(
+        GENERATE(
+            [Ingreso UCI].[Tipo Unidad].members,
+            TOPCOUNT(
+                NONEMPTYCROSSJOIN(
+                    {[Ingreso UCI].[Tipo Unidad].CURRENTMEMBER}, 
+                    [Medicamento].[Nombre Medicamento].children
+                ), 
+                3, 
+                [Measures].[Cantidad]
+            )
+        )
+    ) ON ROWS
+FROM 
+    [UCIDW]
+
+
+
+
+-- 3 cantidad de cada medicamento usado para hombres y para mujeres
+WITH 
+    MEMBER [Measures].[Cantidad Hombres] AS
+        SUM(
+            {[Paciente].[Genero].[Male]}, 
+            [Measures].[Cantidad]
+        )
+    MEMBER [Measures].[Cantidad Mujeres] AS
+        SUM(
+            {[Paciente].[Genero].[Female]}, 
+            [Measures].[Cantidad]
+        )
+SELECT 
+    NON EMPTY 
+    {[Medicamento].[Nombre Medicamento].MEMBERS} ON ROWS,
+    {[Measures].[Cantidad Hombres], [Measures].[Cantidad Mujeres]} ON COLUMNS
+FROM 
+    [UCIDW]
+
+
+-- 4 Pacientes con Mayor Uso de Medicamentos por Hospital (con mas de 500)
+
+SELECT 
+    NON EMPTY 
+    FILTER(
+        [Hospital].[Hospital].[Hospital] * [Paciente].[Unique PID].CHILDREN,
+        [Measures].[Cantidad] > 500
+    ) ON ROWS, 
+    {[Measures].[Cantidad]} ON COLUMNS
+FROM 
+    [UCIDW]
+
+
+-- 5 Volumen de fluido por tipo de UCI y Tratamiento aplicado
+SELECT 
+    [Ingreso UCI].[Tipo Unidad].children ON COLUMNS, 
+    NONEMPTY(
+        TOPCOUNT(
+            [Tratamiento].[Descripcion].children, 
+            3, 
+            [Measures].[Volumen Fluido]
+        )
+    ) ON ROWS
+FROM 
+    [UCIDW]
+WHERE 
+    [Measures].[Volumen Fluido]
+
+
+-- 6 Gasto medio de cantidad y volumen de fluido por numero de camas de hospitales
+
+WITH 
+    MEMBER [Measures].[Media Cantidad] AS 
+        AVG(
+            EXISTING [Hospital].[Hospital].[Hospital].MEMBERS, 
+            [Measures].[Cantidad]
+        )
+    MEMBER [Measures].[Media Volumen Fluido] AS 
+        AVG(
+            EXISTING [Hospital].[Hospital].[Hospital].MEMBERS, 
+            [Measures].[Volumen Fluido]
+        )
+SELECT 
+    {[Measures].[Media Cantidad], 
+     [Measures].[Media Volumen Fluido]} ON COLUMNS, 
+    [Hospital].[Numero Camas Categoria].CHILDREN ON ROWS
+FROM 
+    [UCIDW]
+
+
+-- 7 Gasto en medicamentos superior a 1000 por hospital, etnia, y año para pacientes masculinos en la UCI
+
+WITH 
+    MEMBER [Measures].[Gasto Filtrado] AS 
+        IIF([Measures].[Cantidad] > 1000, [Measures].[Cantidad], NULL)
+
+SELECT 
+    NON EMPTY 
+    ORDER(
+        {[Anyo].[Jerarquía].[Anyo].MEMBERS *
+         [Ingreso UCI].[Jerarquía].[Ingreso UCIID].MEMBERS}*
+		 [Paciente].[Etnia].children, 
+        [Anyo].[Anyo].CURRENTMEMBER, 
+        ASC
+    ) ON ROWS, 
+    {[Measures].[Gasto Filtrado]} ON COLUMNS
+FROM 
+    [UCIDW]
+WHERE 
+    ([Paciente].[Genero].[Male])
+
+
+
+-- 8 volumen de fluido utilizado en el ingreso, clasificado por la altura y peso de los pacientes
+WITH 
+    MEMBER [Measures].[Volumen Fluido Utilizado] AS 
+        SUM(
+            [Ingreso UCI].[Tipo Unidad].members, 
+            [Measures].[Volumen Fluido]
+        )
+SELECT 
+    {[Measures].[Volumen Fluido Utilizado]} ON COLUMNS,
+     NONEMPTYCROSSJOIN(
+        [Ingreso UCI].[Altura Admision].children, 
+        [Ingreso UCI].[Peso Admision].children
+    ) ON ROWS
+FROM 
+    [UCIDW]
+
+
+-- 9 medicamentos que causan alergias y su gasto total
+SELECT 
+    {[Measures].[Cantidad]} ON COLUMNS, 
+    FILTER(
+        [Medicamento].[Nombre Medicamento].children, 
+        [Alergia].[Nombre Medicamento].CURRENTMEMBER 
+    ) ON ROWS
+FROM 
+    [UCIDW]
+
+
+-- 10 volumen de fluido de cada medicamento por region en 2014
+SELECT 
+    {[Measures].[Volumen Fluido]} ON COLUMNS, 
+    NONEMPTYCROSSJOIN(
+        [Hospital].[Region].MEMBERS, 
+        [Medicamento].[Nombre Medicamento].MEMBERS
+    ) ON ROWS
+FROM 
+    [UCIDW]
+WHERE 
+    ([Anyo].[Jerarquía].[Anyo].[2014])
+
+
+
+
+
+--Tasa de Infusión por Hospital y Año
+SELECT 
+    NON EMPTY 
+    {[Hospital].[Hospital].[Hospital].members * [Anyo].[Jerarquía].[Anyo].members} ON ROWS, 
+    {[Measures].[Tasa Infusion]} ON COLUMNS
+FROM 
+    [UCIDW]
+

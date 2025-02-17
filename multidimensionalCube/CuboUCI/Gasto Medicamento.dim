@@ -1,0 +1,181 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="fb3213ff-e893-4982-9a96-cbb3a1c78b43" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Gasto Medicamento</ID>
+  <Name>Gasto Medicamento</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="8c41ef2a-d53a-49e0-ac54-0bae0ecb4d7f">
+    <DataSourceViewID>UCIDW</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="b044bfcc-f103-4969-890f-5294ff23d044">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="651268b0-2336-4a49-b3eb-0ac91edfe344">
+      <ID>Gasto Medicamento ID</ID>
+      <Name>Gasto Medicamento ID</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="dc0744fa-d5d5-468a-a435-18dc007a08b0">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3c7a0877-603c-4532-8461-7c859eb55585">
+            <TableID>dbo_GastoMedicamento</TableID>
+            <ColumnID>GastoMedicamento_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="93895b84-ed61-4d35-bb59-cfaa9ffd12ee">
+          <AttributeID>Medicamento Medicamento Id</AttributeID>
+          <Name>Medicamento Medicamento Id</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4a3893db-29a1-471b-9cf9-47e763c53ae3">
+          <AttributeID>Hospital Hospital ID</AttributeID>
+          <Name>Hospital Hospital ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="64548d7b-410f-4046-8745-4eb9366391a5">
+          <AttributeID>Anyo Anyo ID</AttributeID>
+          <Name>Anyo Anyo ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0816e1b3-c692-4db2-afa4-0cc5afa92f93">
+          <AttributeID>Ingreso UCI Ingreso UCIID</AttributeID>
+          <Name>Ingreso UCI Ingreso UCIID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4f6bc16c-29b2-41cf-8aa9-d3f8237a4e8c">
+          <AttributeID>Paciente Unique PID</AttributeID>
+          <Name>Paciente Unique PID</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0c52fcf7-419e-48d7-8fbd-0983d0cd5495">
+      <ID>Medicamento Medicamento Id</ID>
+      <Name>Medicamento Medicamento Id</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d07148c1-9133-4d3f-970b-b9f073147740">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="99ce1ee8-60a6-47a4-9b53-20d1dee3ece1">
+            <TableID>dbo_GastoMedicamento</TableID>
+            <ColumnID>Medicamento_medicamentoId</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="519b0a9a-aaf5-4693-9756-2ef5b9859a7a">
+      <ID>Hospital Hospital ID</ID>
+      <Name>Hospital Hospital ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="85835f7f-0139-41c1-a567-56611f906a37">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6f023c7c-708c-4c58-8ed6-aac3992c8e68">
+            <TableID>dbo_GastoMedicamento</TableID>
+            <ColumnID>Hospital_hospitalID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7ca9fd39-ba3a-4e52-a374-50169d825e5d">
+      <ID>Anyo Anyo ID</ID>
+      <Name>Anyo Anyo ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="27fbc601-f86c-4522-ba35-e086e158e684">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="787584d5-a9b2-4e55-965f-d56239594796">
+            <TableID>dbo_GastoMedicamento</TableID>
+            <ColumnID>Anyo_anyoID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3ba00b2c-a154-4a39-814c-e0c904d4dbb8">
+      <ID>Ingreso UCI Ingreso UCIID</ID>
+      <Name>Ingreso UCI Ingreso UCIID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="65e5ba96-2235-4c9f-af6d-d2e927868feb">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9a8c5b4a-509f-4d05-91bf-876c512505d3">
+            <TableID>dbo_GastoMedicamento</TableID>
+            <ColumnID>IngresoUCI_ingresoUCIID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a4c57d78-8cbc-4222-9eb9-3b346fd697e8">
+      <ID>Paciente Unique PID</ID>
+      <Name>Paciente Unique PID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="eceb6479-d63c-4442-864b-546ab91af319">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="00b10808-a0e4-43ee-8268-1795bac4a69d">
+            <TableID>dbo_GastoMedicamento</TableID>
+            <ColumnID>Paciente_uniquePID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

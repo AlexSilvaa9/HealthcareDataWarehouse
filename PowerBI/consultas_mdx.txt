@@ -1,0 +1,66 @@
+-- 1-. Cantidad por fuente de admisión
+
+WITH 
+MEMBER [Measures].[Porcentaje] AS
+    IIF(
+        IsEmpty([Measures].[Cantidad]),
+        null,
+        Format(
+            ([Measures].[Cantidad] / 
+            (SUM([Ingreso UCI].[Fuente Admision].MEMBERS, [Measures].[Cantidad]))) * 200, 
+            "0.00"
+        ) + "%"
+    )
+SELECT 
+    NON EMPTY [Ingreso UCI].[Fuente Admision].MEMBERS ON ROWS,
+    [Measures].[Porcentaje] ON COLUMNS
+FROM UCIDW
+
+-- 2-. Cantidad por región
+
+WITH 
+MEMBER [Measures].[Porcentaje] AS
+    IIF(
+        IsEmpty([Measures].[Cantidad]),
+        null,
+        Format(
+            ([Measures].[Cantidad] / 
+            (SUM([Hospital].[Hospital].[Region].MEMBERS, [Measures].[Cantidad]))) * 100, 
+            "0.00"
+        ) + "%"
+    )
+SELECT 
+    NON EMPTY [Hospital].[Hospital].[Region].MEMBERS ON ROWS,
+    [Measures].[Porcentaje] ON COLUMNS
+FROM UCIDW
+
+-- 3-. Cantidad y volumen por año
+
+SELECT NON EMPTY[Anyo].[Jerarquía].[Anyo].MEMBERS ON ROWS, 
+{[Measures].[Cantidad],[Measures].[Volumen Fluido]} ON COLUMNS
+FROM UCIDW
+
+-- 4-. Cantidad por tratamiento
+
+SELECT NON EMPTY [Tratamiento].[Descripcion].MEMBERS ON ROWS, 
+[Measures].[Cantidad] ON COLUMNS
+FROM UCIDW
+
+-- 5-. Cantidad por región hospital
+
+SELECT 
+    NON EMPTY  [Hospital].[Hospital].[Hospital].MEMBERS ON ROWS, 
+    [Measures].[Cantidad] ON COLUMNS
+FROM UCIDW
+
+-- 6-. Cantidad por medicamento y numero de camas
+
+SELECT NON EMPTY [Hospital].[Numero Camas Categoria].MEMBERS * [Medicamento].[Nombre Medicamento].MEMBERS ON ROWS, 
+[Measures].[Cantidad] ON COLUMNS
+FROM UCIDW
+
+-- 7-. Volumen por año y tipo de UCI
+
+SELECT NON EMPTY [Anyo].[Jerarquía].CHILDREN * [Ingreso UCI].[Tipo Unidad].CHILDREN ON ROWS, 
+[Measures].[Volumen Fluido] ON COLUMNS
+FROM UCIDW

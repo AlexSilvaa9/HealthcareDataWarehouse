@@ -1,0 +1,339 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="1da950de-4083-49fb-9cee-4970ae599df0" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Ingreso UCI</ID>
+  <Name>Ingreso UCI</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="8" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1091" scrolltop="-1445" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="9694" y="12171" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="IngresoUCI" left="-149" top="-64" logicalid="4" controlid="1" masterid="0" hint1="0" hint2="0" width="5948" height="3027" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00003c170000d30b0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_IngresoUCI" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="EstanciaHospital" left="750" top="5279" logicalid="5" controlid="2" masterid="0" hint1="0" hint2="0" width="4318" height="2307" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000de10000003090000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_EstanciaHospital" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="860" top="2663" logicalid="6" controlid="3" masterid="0" hint1="0" hint2="0" width="799" height="3116" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[IngresoUCI_EstanciaHospital_FK]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="1" sourceattachpoint="0" destattachpoint="5" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="1259" y="5279" />
+              <point x="1259" y="4195" />
+              <point x="1175" y="4195" />
+              <point x="1175" y="2963" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1091</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-1445</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>-149</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-64</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="210">
+            <Shape Id="Ingreso UCIID" Expanded="false">
+              <Attributes>
+                <Attribute Id="Ingreso UCIID" />
+                <Attribute Id="Nombre Estancia Hospital" />
+                <Attribute Id="Nombre Ingreso UCI" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="Estancia Hospital ID" Expanded="false">
+              <Attributes>
+                <Attribute Id="Estancia Hospital ID" />
+              </Attributes>
+              <Position x="287" y="20" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="a64b67d4-c622-4168-9f63-210f078bdae1">
+    <DataSourceViewID>UCIDW</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="887a587a-1b60-42fd-8fb5-94d68a56bef2">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="d3a5c3d6-aa31-4a6a-a376-23170a10616a">
+      <ID>Ingreso UCIID</ID>
+      <Name>Ingreso UCIID</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e96c503f-7317-48a8-9b36-6d8f536e811e">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2ca9dbb0-0664-48a5-a003-d5d1e8d2c200">
+            <TableID>dbo_IngresoUCI</TableID>
+            <ColumnID>ingresoUCIID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="15d28aeb-4d4c-4edc-8d32-fffea87c80ab">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="1b360bc2-84cc-494a-93bd-d33c8e13d831">
+          <TableID>dbo_IngresoUCI</TableID>
+          <ColumnID>nombreIngresoUCI</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="558e6576-f271-4033-bd26-15c04d845cc3">
+          <AttributeID>Estancia Hospital ID</AttributeID>
+          <Name>Estancia Hospital ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="578488da-5d2a-4124-9169-f628263dff95">
+          <AttributeID>Tipo Unidad</AttributeID>
+          <Name>Tipo Unidad</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="fc324ac8-cffc-4dc0-b496-0e502b892493">
+          <AttributeID>Peso Admision</AttributeID>
+          <Name>Peso Admision</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8fe1fb94-7bba-41b5-bc1c-e89573b00c3d">
+          <AttributeID>Estado Alta Hospitalaria</AttributeID>
+          <Name>Estado Alta Hospitalaria</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2d39aafb-7aa2-4650-9a2e-9de7bf7c9598">
+          <AttributeID>Fuente Admision</AttributeID>
+          <Name>Fuente Admision</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7d0bf135-e498-4eed-b7e9-9e1fe4ea6a55">
+          <AttributeID>Altura Admision</AttributeID>
+          <Name>Altura Admision</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="504bdc41-aabf-415c-ad91-72e3229836f3">
+      <ID>Estancia Hospital ID</ID>
+      <Name>Estancia Hospital ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3c139f15-f1c2-40c8-8f5c-3411e8f2389d">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="226ad0ee-5b32-4c8a-94b6-0f78d1d34d5a">
+            <TableID>dbo_EstanciaHospital</TableID>
+            <ColumnID>estanciaHospitalID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="0f1b2fd9-3778-4f6d-a27d-eea00145440b">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="a6990ded-bbea-4e3f-afb7-dd9f2f24b19d">
+          <TableID>dbo_EstanciaHospital</TableID>
+          <ColumnID>nombreEstanciaHospital</ColumnID>
+        </Source>
+      </NameColumn>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="48c9aaef-406e-4461-9771-e62862430909">
+      <ID>Tipo Unidad</ID>
+      <Name>Tipo Unidad</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1f3b8a30-17b4-49c4-a87b-66e3b3c84f69">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="29be220d-a836-4c0b-97b0-462a33dcedc9">
+            <TableID>dbo_IngresoUCI</TableID>
+            <ColumnID>tipoUnidad</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c6607ade-e44c-4a7c-98a6-5127605e6c8c">
+      <ID>Peso Admision</ID>
+      <Name>Peso Admision</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="932db818-642d-4135-9846-1287e0601ad1">
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0b7967ed-c826-4808-aa4a-44d193d5097b">
+            <TableID>dbo_IngresoUCI</TableID>
+            <ColumnID>pesoAdmision</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="af11e1f9-f00a-4681-92a7-b1fcda8f2666">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2980969c-4134-4512-8912-fb83819b9a53">
+            <TableID>dbo_IngresoUCI</TableID>
+            <ColumnID>ingresoUCIID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="4382a2f8-db7a-4461-bbe4-ac88a1db088d">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="512245d0-3c31-43c3-ab2c-924e61e1f898">
+          <TableID>dbo_IngresoUCI</TableID>
+          <ColumnID>pesoAdmision</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="686053a2-7f17-4431-bf8a-1774a805539a">
+      <ID>Estado Alta Hospitalaria</ID>
+      <Name>Estado Alta Hospitalaria</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4bf21cd3-699c-43ac-a4ee-79e2a88de062">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d08d9cc4-2b3b-4578-992c-f3cffb3cacd7">
+            <TableID>dbo_EstanciaHospital</TableID>
+            <ColumnID>estadoAltaHospitalaria</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d3c7c805-080c-4d20-9cc6-d604c11c9f31">
+      <ID>Fuente Admision</ID>
+      <Name>Fuente Admision</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="40d96607-9fc8-4926-b295-c6d5d7ac9026">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6b5a6b5c-cb03-4585-b09d-e34663909878">
+            <TableID>dbo_EstanciaHospital</TableID>
+            <ColumnID>fuenteAdmision</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="86154769-7ca0-4587-a3c6-adc7cbbedc2c">
+      <ID>Altura Admision</ID>
+      <Name>Altura Admision</Name>
+      <Type>PhysicalHeight</Type>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2fc9ec61-8eb8-4ba1-bdbc-cc7804bd66c1">
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bd77d21e-428f-4e94-85ba-3aa160c458b9">
+            <TableID>dbo_IngresoUCI</TableID>
+            <ColumnID>alturaAdmision</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="391c6b48-d428-4b66-8af6-b5c609f221f3">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a1b66a18-5709-4640-8bd1-6bde52f09dd5">
+            <TableID>dbo_IngresoUCI</TableID>
+            <ColumnID>ingresoUCIID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="d24013e2-9736-4f38-829a-b7c4980db6cc">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="5d5951f0-f0a3-4e61-a2d6-a350ef453d29">
+          <TableID>dbo_IngresoUCI</TableID>
+          <ColumnID>alturaAdmision</ColumnID>
+        </Source>
+      </NameColumn>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="d22ad922-cd68-4d6d-a493-ed0a42417266">
+      <ID>Jerarquía</ID>
+      <Name>Jerarquía</Name>
+      <Levels>
+        <Level dwd:design-time-name="71d97961-b7e7-4e4a-ad11-9973dcc0c6c6">
+          <ID>Estancia Hospital ID</ID>
+          <Name>Estancia Hospital ID</Name>
+          <SourceAttributeID>Estancia Hospital ID</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="1b7b13b9-eefa-4bdc-8383-be12ace8a0cc">
+          <ID>Ingreso UCIID</ID>
+          <Name>Ingreso UCIID</Name>
+          <SourceAttributeID>Ingreso UCIID</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
